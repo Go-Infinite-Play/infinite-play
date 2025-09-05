@@ -45,7 +45,7 @@ export default function EmailForm({
         throw new Error(errorData.error || 'Failed to submit email');
       }
 
-      const result = await response.json();
+      await response.json();
       
       setStatus("success");
       setMessage("🎉 Boom! Your email just landed in our inbox faster than ChatGPT can say 'I'm sorry, I can't help with that.' We'll be in touch within 24 hours!");

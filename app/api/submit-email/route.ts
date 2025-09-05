@@ -4,6 +4,10 @@ import Airtable from 'airtable';
 // Configure Airtable
 const AIRTABLE_PERSONAL_ACCESS_TOKEN = process.env.AIRTABLE_PERSONAL_ACCESS_TOKEN;
 
+if (!AIRTABLE_PERSONAL_ACCESS_TOKEN) {
+  throw new Error('AIRTABLE_PERSONAL_ACCESS_TOKEN environment variable is required');
+}
+
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'app1cZoJ2TlJFYjTr';
 const AIRTABLE_TABLE_NAME = process.env.AIRTABLE_TABLE_NAME || 'Email Capture';
 
