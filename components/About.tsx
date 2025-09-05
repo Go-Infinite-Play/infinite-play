@@ -15,7 +15,7 @@ export default function About() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="max-w-7xl mx-auto px-4"
       >
         {/* Section Header */}
@@ -166,26 +166,6 @@ export default function About() {
           </motion.div>
         </div>
 
-        {/* Vision Statement */}
-        <motion.div
-          variants={staggerItem}
-          className="mt-24 text-center"
-        >
-          <div className="max-w-4xl mx-auto p-8 bg-gradient-to-r from-primary/5 to-success-green/5 border border-border-divider rounded-2xl">
-            <motion.blockquote
-              variants={fadeInUp}
-              className="text-xl md:text-2xl text-light-text font-medium italic leading-relaxed"
-            >
-              &ldquo;The future belongs to companies that embrace AI not as a replacement for human creativity, 
-              but as an amplifier of human potential. My mission is to bridge that gap, one transformation at a time.&rdquo;
-            </motion.blockquote>
-            <motion.footer variants={fadeInUp} className="mt-6">
-              <p className="text-muted-text">
-                — Jeremy Olken, Founder, Infinite Play
-              </p>
-            </motion.footer>
-          </div>
-        </motion.div>
       </motion.div>
     </section>
   );

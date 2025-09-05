@@ -10,7 +10,7 @@ export const fadeIn: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.3,
       ease: "easeOut"
     }
   }
@@ -19,13 +19,13 @@ export const fadeIn: Variants = {
 export const fadeInUp: Variants = {
   hidden: { 
     opacity: 0,
-    y: 60
+    y: 30
   },
   visible: { 
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       ease: "easeOut"
     }
   }
@@ -37,8 +37,8 @@ export const staggerContainer: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.3
+      staggerChildren: 0.05,
+      delayChildren: 0.1
     }
   }
 };
@@ -52,7 +52,7 @@ export const staggerItem: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.3,
       ease: "easeOut"
     }
   }
@@ -99,13 +99,13 @@ export const cardHover: Variants = {
 export const slideInFromLeft: Variants = {
   hidden: { 
     opacity: 0,
-    x: -100
+    x: -50
   },
   visible: { 
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       ease: "easeOut"
     }
   }
@@ -114,13 +114,13 @@ export const slideInFromLeft: Variants = {
 export const slideInFromRight: Variants = {
   hidden: { 
     opacity: 0,
-    x: 100
+    x: 50
   },
   visible: { 
     opacity: 1,
     x: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       ease: "easeOut"
     }
   }
@@ -130,13 +130,13 @@ export const slideInFromRight: Variants = {
 export const textReveal: Variants = {
   hidden: { 
     opacity: 0,
-    y: 100
+    y: 30
   },
   visible: { 
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.4,
       ease: [0.6, 0.05, 0.01, 0.9]
     }
   }

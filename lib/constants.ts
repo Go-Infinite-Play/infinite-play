@@ -165,9 +165,9 @@ export const footerLinks = {
 
 // Contact information
 export const contactInfo = {
-  email: "hello@infiniteplay.ai",
-  linkedin: "Your LinkedIn",
-  location: "Your City"
+  email: "jeremy@infiniteplay.ai",
+  linkedin: "https://www.linkedin.com/in/jeremyolken/",
+  location: "Denver, CO"
 } as const;
 
 // Meta information

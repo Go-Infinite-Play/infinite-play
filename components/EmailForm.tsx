@@ -13,7 +13,7 @@ interface EmailFormProps {
 
 export default function EmailForm({ 
   placeholder = "Your work email", 
-  buttonText = "Start the Conversation",
+  buttonText = "Get in Touch",
   subText = "Get a free AI opportunity assessment for your company"
 }: EmailFormProps) {
   const [email, setEmail] = useState("");
@@ -32,12 +32,23 @@ export default function EmailForm({
     setStatus("loading");
     
     try {
-      // Simulate API call - replace with actual Beehive integration
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch('/api/submit-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to submit email');
+      }
+
+      const result = await response.json();
       
-      // For now, just simulate success
       setStatus("success");
-      setMessage("Thank you! We'll be in touch within 24 hours.");
+      setMessage("🎉 Boom! Your email just landed in our inbox faster than ChatGPT can say 'I'm sorry, I can't help with that.' We'll be in touch within 24 hours!");
       setEmail("");
       
       // Reset status after 5 seconds
@@ -46,9 +57,9 @@ export default function EmailForm({
         setMessage("");
       }, 5000);
       
-    } catch {
+    } catch (error) {
       setStatus("error");
-      setMessage("Something went wrong. Please try again.");
+      setMessage(error instanceof Error ? error.message : "Something went wrong. Please try again.");
       
       // Reset status after 5 seconds
       setTimeout(() => {

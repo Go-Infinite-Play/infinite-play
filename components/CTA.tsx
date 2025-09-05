@@ -43,7 +43,7 @@ export default function CTA() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="relative z-10 max-w-4xl mx-auto px-4 text-center"
       >
         {/* Floating icon */}
@@ -98,12 +98,12 @@ export default function CTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
             <motion.a
-              href="mailto:hello@infiniteplay.ai"
+              href="mailto:jeremy@infiniteplay.ai"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group flex items-center gap-2 text-muted-text hover:text-light-text transition-colors font-medium"
             >
-              <span>hello@infiniteplay.ai</span>
+              <span>jeremy@infiniteplay.ai</span>
               <ArrowRight 
                 size={16} 
                 className="group-hover:translate-x-1 transition-transform duration-200" 

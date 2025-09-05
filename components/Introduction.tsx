@@ -9,7 +9,7 @@ function Counter({ value, duration = 2 }: { value: string, suffix: string, durat
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   useEffect(() => {
     if (isInView && !hasAnimated) {
@@ -50,7 +50,7 @@ export default function Introduction() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="max-w-7xl mx-auto px-4"
       >
         <div className="max-w-4xl mx-auto text-center mb-20">
@@ -89,7 +89,7 @@ export default function Introduction() {
                 initial={counterAnimation.initial}
                 whileInView={counterAnimation.animate}
                 transition={{ ...counterAnimation.transition, delay: index * 0.1 }}
-                viewport={{ once: true, amount: 0.5 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="mb-4"
               >
                 <div className="text-4xl md:text-5xl font-bold font-heading text-primary mb-2">

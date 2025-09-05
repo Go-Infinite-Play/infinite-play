@@ -10,11 +10,11 @@ import { heroRotatingWords } from "@/lib/constants";
 export default function Hero() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
-  // Rotate words every 2 seconds
+  // Rotate words every 1.5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWordIndex((prev) => (prev + 1) % heroRotatingWords.length);
-    }, 2000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
@@ -30,24 +30,24 @@ export default function Hero() {
   const wordAnimation = {
     initial: {
       opacity: 0,
-      y: 20,
-      scale: 0.9,
+      y: 15,
+      scale: 0.95,
     },
     animate: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
       },
     },
     exit: {
       opacity: 0,
-      y: -20,
-      scale: 1.1,
+      y: -15,
+      scale: 1.05,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: [0.25, 0.46, 0.45, 0.94] as [number, number, number, number],
       },
     },

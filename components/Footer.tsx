@@ -5,6 +5,7 @@ import { Mail, MapPin, Linkedin, ArrowUp } from "lucide-react";
 import Image from "next/image";
 import { footerLinks, contactInfo, siteConfig } from "@/lib/constants";
 import { staggerContainer, staggerItem, buttonHover } from "@/lib/animations";
+import EmailForm from "./EmailForm";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -25,12 +26,12 @@ export default function Footer() {
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="max-w-7xl mx-auto px-4 py-16"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Company info */}
-          <motion.div variants={staggerItem} className="lg:col-span-1">
+          <motion.div variants={staggerItem} className="">
             <div className="mb-6">
               <motion.div
                 variants={buttonHover}
@@ -79,14 +80,16 @@ export default function Footer() {
               </motion.div>
 
               <motion.a
-                href="#"
+                href={contactInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 variants={buttonHover}
                 initial="rest"
                 whileHover="hover"
                 className="flex items-center gap-3 text-muted-text hover:text-light-text transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
-                <span className="text-sm">{contactInfo.linkedin}</span>
+                <span className="text-sm">LinkedIn Profile</span>
               </motion.a>
             </div>
           </motion.div>
@@ -113,49 +116,6 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Resources links */}
-          <motion.div variants={staggerItem}>
-            <h4 className="text-lg font-semibold text-light-text mb-6 font-heading">
-              Resources
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.label}>
-                  <motion.a
-                    href={link.href}
-                    variants={buttonHover}
-                    initial="rest"
-                    whileHover="hover"
-                    className="text-muted-text hover:text-light-text transition-colors text-sm"
-                  >
-                    {link.label}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* Legal links */}
-          <motion.div variants={staggerItem}>
-            <h4 className="text-lg font-semibold text-light-text mb-6 font-heading">
-              Legal
-            </h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <motion.a
-                    href={link.href}
-                    variants={buttonHover}
-                    initial="rest"
-                    whileHover="hover"
-                    className="text-muted-text hover:text-light-text transition-colors text-sm"
-                  >
-                    {link.label}
-                  </motion.a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
         </div>
 
         {/* Newsletter signup */}
@@ -171,21 +131,12 @@ export default function Footer() {
               Get insights, case studies, and practical AI implementation tips delivered to your inbox monthly.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-3 max-w-lg">
-              <input
-                type="email"
+            <div className="max-w-lg">
+              <EmailForm 
                 placeholder="Your email address"
-                className="flex-1 px-4 py-3 border border-border-divider rounded-lg bg-card-bg/50 text-light-text placeholder-muted-text focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                buttonText="Get in Touch"
+                subText=""
               />
-              <motion.button
-                variants={buttonHover}
-                initial="rest"
-                whileHover="hover"
-                whileTap="tap"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap"
-              >
-                Subscribe
-              </motion.button>
             </div>
           </div>
         </motion.div>
