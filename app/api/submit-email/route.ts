@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import Airtable from 'airtable';
 
 // Configure Airtable
-const AIRTABLE_PERSONAL_ACCESS_TOKEN = 'pat2PRiR4iEbEhRFV.db7d359a97f7936f437475830c170980279e9e49b87be938e7a8eed0c3a0e2b9';
+const AIRTABLE_PERSONAL_ACCESS_TOKEN = process.env.AIRTABLE_PERSONAL_ACCESS_TOKEN;
 
 const AIRTABLE_BASE_ID = process.env.AIRTABLE_BASE_ID || 'app1cZoJ2TlJFYjTr';
 const AIRTABLE_TABLE_NAME = process.env.AIRTABLE_TABLE_NAME || 'Email Capture';
