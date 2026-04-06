@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react"
 import { navigationItems } from "@/lib/constants"
 import { drawerAnimation, buttonHover } from "@/lib/animations"
 import { Button } from "@/components/ui/button"
+import ThemeToggle from "@/components/ThemeToggle"
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -64,6 +65,8 @@ export default function Navigation() {
               </motion.button>
             ))}
 
+            <ThemeToggle />
+
             <motion.div
               variants={buttonHover}
               initial="rest"
@@ -116,6 +119,9 @@ export default function Navigation() {
               className="fixed top-0 right-0 bottom-0 w-80 bg-background border-l border-border z-50 md:hidden"
             >
               <div className="p-6 pt-20">
+                <div className="flex justify-end mb-4">
+                  <ThemeToggle />
+                </div>
                 <div className="flex flex-col space-y-6">
                   {navigationItems.map((item) => (
                     <motion.button

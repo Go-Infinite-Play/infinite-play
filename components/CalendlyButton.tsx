@@ -72,8 +72,8 @@ export default function CalendlyButton({
         className={
           className ??
           (variant === "primary"
-            ? "bg-primary text-primary-foreground px-8 py-4 text-base font-semibold"
-            : "px-8 py-4 text-base font-semibold")
+            ? "bg-primary text-primary-foreground px-8 py-4 text-base font-semibold min-h-[44px]"
+            : "px-8 py-4 text-base font-semibold min-h-[44px]")
         }
         variant={variant === "outline" ? "outline" : "default"}
         onClick={handleClick}

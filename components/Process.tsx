@@ -20,7 +20,7 @@ export default function Process() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        className="max-w-7xl mx-auto px-4"
+        className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-0"
       >
         {/* Section Header */}
         <div className="text-center mb-20">

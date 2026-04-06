@@ -18,7 +18,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="bg-slate-900 text-slate-100 dark:bg-slate-950 dark:text-slate-200">
       {/* Main footer content */}
       <motion.div
         variants={staggerContainer}
@@ -31,10 +31,10 @@ export default function Footer() {
           {/* Company info */}
           <motion.div variants={staggerItem}>
             <div className="mb-6">
-              <h3 className="text-2xl font-bold font-heading text-background mb-4">
+              <h3 className="text-2xl font-bold font-heading text-white mb-4">
                 {siteConfig.name}
               </h3>
-              <p className="text-background/70 leading-relaxed mb-6">
+              <p className="text-slate-400 leading-relaxed mb-6">
                 {siteConfig.description}
               </p>
             </div>
@@ -46,13 +46,13 @@ export default function Footer() {
                 variants={buttonHover}
                 initial="rest"
                 whileHover="hover"
-                className="flex items-center gap-3 text-background/70 hover:text-background transition-colors"
+                className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 <span className="text-sm">{contactInfo.email}</span>
               </motion.a>
 
-              <div className="flex items-center gap-3 text-background/70">
+              <div className="flex items-center gap-3 text-slate-400">
                 <MapPin className="w-4 h-4" />
                 <span className="text-sm">{contactInfo.location}</span>
               </div>
@@ -64,7 +64,7 @@ export default function Footer() {
                 variants={buttonHover}
                 initial="rest"
                 whileHover="hover"
-                className="flex items-center gap-3 text-background/70 hover:text-background transition-colors"
+                className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors"
               >
                 <Linkedin className="w-4 h-4" />
                 <span className="text-sm">LinkedIn Profile</span>
@@ -75,7 +75,7 @@ export default function Footer() {
                 initial="rest"
                 whileHover="hover"
                 onClick={() => scrollToSection("#contact")}
-                className="flex items-center gap-3 text-background/70 hover:text-background transition-colors"
+                className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors"
               >
                 <Calendar className="w-4 h-4" />
                 <span className="text-sm">Book a Discovery Call</span>
@@ -86,7 +86,7 @@ export default function Footer() {
                 initial="rest"
                 whileHover="hover"
                 onClick={() => scrollToSection("#contact")}
-                className="flex items-center gap-3 text-background/70 hover:text-background transition-colors"
+                className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors"
               >
                 <MessageSquare className="w-4 h-4" />
                 <span className="text-sm">Send a message</span>
@@ -96,7 +96,7 @@ export default function Footer() {
 
           {/* Company links */}
           <motion.div variants={staggerItem}>
-            <h4 className="text-lg font-semibold text-background mb-6 font-heading">
+            <h4 className="text-lg font-semibold text-white mb-6 font-heading">
               Company
             </h4>
             <ul className="space-y-3">
@@ -107,7 +107,7 @@ export default function Footer() {
                     initial="rest"
                     whileHover="hover"
                     onClick={() => scrollToSection(link.href)}
-                    className="text-background/70 hover:text-background transition-colors text-sm text-left"
+                    className="text-slate-400 hover:text-white transition-colors text-sm text-left"
                   >
                     {link.label}
                   </motion.button>
@@ -119,10 +119,10 @@ export default function Footer() {
       </motion.div>
 
       {/* Bottom bar */}
-      <div className="border-t border-background/20">
+      <div className="border-t border-slate-700">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-0 py-6">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-background/60 text-sm">
+            <p className="text-slate-500 text-sm">
               &copy; {new Date().getFullYear()} {siteConfig.name}. {siteConfig.tagline}
             </p>
 
@@ -133,7 +133,7 @@ export default function Footer() {
               whileHover="hover"
               whileTap="tap"
               onClick={scrollToTop}
-              className="group flex items-center gap-2 text-background/60 hover:text-background transition-colors text-sm"
+              className="group flex items-center gap-2 text-slate-500 hover:text-white transition-colors text-sm"
             >
               <span>Back to top</span>
               <ArrowUp

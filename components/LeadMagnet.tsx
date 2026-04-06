@@ -127,7 +127,7 @@ export default function LeadMagnet() {
           {/* Right column - form */}
           <motion.div
             variants={staggerItem}
-            className="bg-muted rounded-xl p-8"
+            className="bg-muted rounded-xl p-6 md:p-8"
           >
             <h3 className="text-lg font-medium mb-1">Get the checklist</h3>
             <p className="text-sm text-muted-foreground mb-4">
@@ -145,7 +145,7 @@ export default function LeadMagnet() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your work email"
                   disabled={status === "loading"}
-                  className="block w-full pl-12 pr-4 py-4 border border-border rounded-lg bg-background/50 backdrop-blur-sm text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                  className="block w-full pl-12 pr-4 py-4 border border-border rounded-lg bg-background/50 backdrop-blur-sm text-base text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 min-h-[44px]"
                   required
                 />
               </div>

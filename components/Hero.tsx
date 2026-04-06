@@ -55,7 +55,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-darker-bg via-dark-bg to-darker-bg">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-darker-bg via-dark-bg to-darker-bg pt-24 md:pt-28">
       {/* Animated background orbs */}
       <div className="absolute inset-0">
         <motion.div

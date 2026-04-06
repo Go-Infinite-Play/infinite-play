@@ -52,6 +52,27 @@ export const buttonHover: Variants = {
   tap: { scale: 0.95, transition: { duration: 0.1, ease: "easeInOut" } }
 }
 
+export const floatingOrb: Variants = {
+  animate: {
+    scale: [1, 1.1, 1],
+    opacity: [0.3, 0.5, 0.3],
+    transition: {
+      duration: 8,
+      repeat: Infinity,
+      ease: "easeInOut"
+    }
+  }
+}
+
+export const textReveal: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" }
+  }
+}
+
 export const drawerAnimation: Variants = {
   closed: { x: "100%", transition: { duration: 0.3, ease: "easeInOut" } },
   open: { x: 0, transition: { duration: 0.3, ease: "easeInOut" } }

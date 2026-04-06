@@ -69,7 +69,7 @@ export default function ContactForm() {
   }
 
   const inputClasses =
-    "block w-full py-3 px-4 border border-border rounded-lg bg-background/50 backdrop-blur-sm text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+    "block w-full py-3 px-4 border border-border rounded-lg bg-background/50 backdrop-blur-sm text-base text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 min-h-[44px]"
 
   return (
     <div className="w-full max-w-lg mx-auto">
@@ -200,7 +200,7 @@ export default function ContactForm() {
           whileTap={submitStatus !== "loading" ? "tap" : "rest"}
           type="submit"
           disabled={submitStatus === "loading"}
-          className="group w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="group w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-lg font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[44px]"
         >
           {submitStatus === "loading" ? (
             <>
