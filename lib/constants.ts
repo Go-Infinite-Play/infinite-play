@@ -208,7 +208,8 @@ export const footerLinks = {
 export const contactInfo = {
   email: "jeremy@infiniteplay.ai",
   linkedin: "https://www.linkedin.com/in/jeremyolken/",
-  location: "Denver, CO"
+  location: "Denver, CO",
+  calendly: "https://calendly.com/jeremy-infiniteplay/discovery"
 } as const;
 
 // Claude product taxonomy (COPY-04)
