@@ -359,6 +359,13 @@ export const aboutBio = {
   ],
 } as const;
 
+// Availability status
+export const availability = {
+  accepting: true,
+  text: "Currently accepting new clients",
+  // Toggle `accepting` to false and update text to "Fully booked — next availability June 2026" when needed
+} as const;
+
 // Meta information
 export const siteConfig = {
   name: "Infinite Play | Claude Implementation Consulting",
