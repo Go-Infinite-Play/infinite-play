@@ -36,8 +36,8 @@ Decimal phases appear between their surrounding integers in numeric order.
   4. Design tokens (colors, typography, spacing) are consistent across all sections
 **Plans**: 2 plans
 Plans:
-- [ ] 01-01-PLAN.md — Design tokens, animations, constants, shadcn install
-- [ ] 01-02-PLAN.md — Component rewrites/creation and page assembly
+- [x] 01-01-PLAN.md — Design tokens, animations, constants, shadcn install
+- [x] 01-02-PLAN.md — Component rewrites/creation and page assembly
 **UI hint**: yes
 
 ### Phase 2: Hero & Value Proposition
