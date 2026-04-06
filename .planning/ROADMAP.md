@@ -157,7 +157,7 @@ Plans:
   4. JSON-LD structured data (Person, ProfessionalService) is present for rich search results
 **Plans**: 1 plan
 Plans:
-- [ ] 08-01-PLAN.md — Resend integration, lead magnet capture, and notification emails
+- [ ] 10-01-PLAN.md — SEO metadata, Plausible Analytics, JSON-LD structured data, and availability indicator
 
 ## Progress
 
@@ -173,6 +173,6 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 | 5. Claude Expertise & Content | 0/1 | Planning complete | - |
 | 6. Trust & Social Proof | 0/1 | Planning complete | - |
 | 7. Booking & Contact Infrastructure | 0/2 | Planning complete | - |
-| 8. Email & Lead Capture | 0/TBD | Not started | - |
+| 8. Email & Lead Capture | 0/1 | Planning complete | - |
 | 9. Mobile & Responsive Polish | 0/2 | Planning complete | - |
-| 10. SEO & Analytics | 0/TBD | Not started | - |
+| 10. SEO & Analytics | 0/1 | Planning complete | - |
