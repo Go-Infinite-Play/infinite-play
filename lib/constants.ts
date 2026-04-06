@@ -165,6 +165,98 @@ export const contactInfo = {
   location: "Denver, CO"
 } as const;
 
+// Claude product taxonomy (COPY-04)
+export const claudeProducts = [
+  {
+    id: "chat",
+    name: "Claude Chat",
+    icon: "MessageSquare",
+    category: "individual",
+    description: "The conversational interface millions use daily for writing, analysis, and problem-solving.",
+    howJeremyHelps: "I teach teams to move beyond basic prompting — custom instructions, Projects for context management, and workflows that replace hours of manual work."
+  },
+  {
+    id: "teams",
+    name: "Claude for Teams",
+    icon: "Users",
+    category: "team",
+    description: "Shared workspace with team-wide conversations, centralized billing, and admin controls.",
+    howJeremyHelps: "I set up team workspaces with shared prompt libraries, onboard every team member, and build adoption habits that stick past week one."
+  },
+  {
+    id: "enterprise",
+    name: "Claude Enterprise",
+    icon: "Building2",
+    category: "team",
+    description: "SSO, SCIM provisioning, expanded context windows, and enterprise-grade security for large organizations.",
+    howJeremyHelps: "I design the rollout strategy, configure workspaces by department, and create training programs scaled to hundreds of users."
+  },
+  {
+    id: "code",
+    name: "Claude Code",
+    icon: "Terminal",
+    category: "developer",
+    description: "An agentic coding tool that lives in your terminal — reads your codebase, runs commands, and writes code alongside you.",
+    howJeremyHelps: "I configure Claude Code for your repo with custom CLAUDE.md instructions, slash commands, and MCP integrations that make it a real team member."
+  },
+  {
+    id: "api",
+    name: "Claude API",
+    icon: "Code",
+    category: "developer",
+    description: "Direct access to Claude models for building custom applications, automations, and integrations.",
+    howJeremyHelps: "I architect API-powered workflows — from automated document processing to custom internal tools — so Claude works even when nobody is prompting."
+  },
+  {
+    id: "mcp",
+    name: "MCP (Model Context Protocol)",
+    icon: "Plug",
+    category: "developer",
+    description: "An open standard that connects Claude to your tools, databases, and internal systems.",
+    howJeremyHelps: "I build custom MCP servers that give Claude access to your Notion, Slack, databases, and internal APIs — turning it from a chatbot into an integrated team member."
+  }
+] as const;
+
+// Workflow before/after examples (COPY-05, TRUST-04)
+export const workflowExamples = [
+  {
+    id: "weekly-reports",
+    title: "Weekly Status Reports",
+    context: "Operations team at a 50-person company",
+    before: "Manager spends 3 hours every Monday compiling updates from Slack, email, and project tools into a status report",
+    after: "Claude with MCP pulls from Slack and Linear, drafts the report in 10 minutes. Manager reviews and sends in 20 minutes total.",
+    timeSaved: "2.5 hours/week",
+    claudeProduct: "MCP + Claude Chat"
+  },
+  {
+    id: "code-review",
+    title: "Code Review and Documentation",
+    context: "Engineering team adopting AI-assisted development",
+    before: "Senior devs spend 6+ hours per week reviewing PRs and writing documentation nobody reads",
+    after: "Claude Code reviews PRs against team standards, suggests fixes, and generates documentation that stays in sync with the code.",
+    timeSaved: "4 hours/week per senior dev",
+    claudeProduct: "Claude Code"
+  },
+  {
+    id: "customer-research",
+    title: "Customer Research Synthesis",
+    context: "Product team at a growing SaaS company",
+    before: "PM manually reads 200+ support tickets and NPS responses, writes a quarterly insights deck over 2 days",
+    after: "Claude analyzes all tickets via API, identifies patterns, and produces a structured insights report with citations. PM refines in 2 hours.",
+    timeSaved: "1.5 days/quarter",
+    claudeProduct: "Claude API"
+  },
+  {
+    id: "onboarding-docs",
+    title: "New Hire Onboarding",
+    context: "HR team struggling with outdated documentation",
+    before: "New hires get a stale Notion wiki and figure things out by asking teammates, slowing everyone down for 2-3 weeks",
+    after: "Claude-powered onboarding assistant (via MCP) answers questions from live company docs, Slack history, and process wikis. New hires are productive in days.",
+    timeSaved: "1-2 weeks ramp time",
+    claudeProduct: "MCP + Claude Teams"
+  }
+] as const;
+
 // Meta information
 export const siteConfig = {
   name: "Infinite Play",
