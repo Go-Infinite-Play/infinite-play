@@ -75,7 +75,9 @@ Plans:
   2. Each service tier displays "starting from" pricing that pre-qualifies leads
   3. "How to work with me" section presents a clear 3-4 step engagement process (Talk > Plan > Execute > Results)
   4. A visitor can determine which service fits their situation without needing to ask
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 04-01-PLAN.md — Service tiers with pricing and engagement process
 **UI hint**: yes
 
 ### Phase 5: Claude Expertise & Content
@@ -153,7 +155,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 | 1. Design System & Layout Foundation | 0/2 | Planning complete | - |
 | 2. Hero & Value Proposition | 0/1 | Planning complete | - |
 | 3. Audience & Problem Messaging | 0/1 | Planning complete | - |
-| 4. Services & Engagement Process | 0/TBD | Not started | - |
+| 4. Services & Engagement Process | 0/1 | Planning complete | - |
 | 5. Claude Expertise & Content | 0/TBD | Not started | - |
 | 6. Trust & Social Proof | 0/TBD | Not started | - |
 | 7. Booking & Contact Infrastructure | 0/TBD | Not started | - |
