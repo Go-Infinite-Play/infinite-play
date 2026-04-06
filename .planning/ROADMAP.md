@@ -77,7 +77,7 @@ Plans:
   4. A visitor can determine which service fits their situation without needing to ask
 **Plans**: 1 plan
 Plans:
-- [ ] 04-01-PLAN.md — Service tiers with pricing and engagement process
+- [x] 04-01-PLAN.md — Service tiers with pricing and engagement process
 **UI hint**: yes
 
 ### Phase 5: Claude Expertise & Content
