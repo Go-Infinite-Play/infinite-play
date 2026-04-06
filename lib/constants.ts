@@ -1,3 +1,12 @@
+// Hero content -- above-the-fold positioning copy
+export const heroContent = {
+  headline: "I help teams get real value from Claude",
+  subhead: "Setup, workflow redesign, and hands-on training for teams that want to actually use Claude — not just talk about it.",
+  primaryCta: "Book a Discovery Call",
+  secondaryCta: "See What I Offer",
+  secondaryCtaHref: "#services",
+} as const
+
 // Navigation items -- updated for new section order
 export const navigationItems = [
   { href: "#services", label: "Services" },
