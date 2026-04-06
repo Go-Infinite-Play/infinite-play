@@ -88,7 +88,9 @@ Plans:
   1. Claude product taxonomy is explicitly visible -- Chat, Teams, Enterprise, Claude Code, API, MCP each named and contextualized
   2. Real before/after workflow examples demonstrate daily Claude usage with specific outcomes
   3. Static practical content shows Claude knowledge depth that a generalist AI consultant could not produce
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 05-01-PLAN.md — Claude product taxonomy grid, before/after workflow showcase, and page integration
 **UI hint**: yes
 
 ### Phase 6: Trust & Social Proof
@@ -156,7 +158,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 | 2. Hero & Value Proposition | 0/1 | Planning complete | - |
 | 3. Audience & Problem Messaging | 0/1 | Planning complete | - |
 | 4. Services & Engagement Process | 0/1 | Planning complete | - |
-| 5. Claude Expertise & Content | 0/TBD | Not started | - |
+| 5. Claude Expertise & Content | 0/1 | Planning complete | - |
 | 6. Trust & Social Proof | 0/TBD | Not started | - |
 | 7. Booking & Contact Infrastructure | 0/TBD | Not started | - |
 | 8. Email & Lead Capture | 0/TBD | Not started | - |
