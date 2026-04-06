@@ -1,64 +1,143 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Zap, Code, RefreshCw } from "lucide-react"
-import { sectionFadeIn, staggerContainer, staggerItem } from "@/lib/animations"
-import { services } from "@/lib/constants"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { motion } from "framer-motion";
+import {
+  GraduationCap,
+  Zap,
+  Code,
+  RefreshCw,
+  ArrowRight,
+} from "lucide-react";
+import { services } from "@/lib/constants";
+import { staggerContainer, staggerItem } from "@/lib/animations";
 
-const iconMap = {
+const serviceIconMap = {
+  GraduationCap: GraduationCap,
   Zap: Zap,
   Code: Code,
   RefreshCw: RefreshCw,
-}
+};
 
 export default function Services() {
   return (
-    <motion.section
-      id="services"
-      variants={sectionFadeIn}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
-      className="py-8 md:py-16 bg-muted"
-    >
-      <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-0">
-        <h2 className="font-heading text-[1.25rem] md:text-[1.5rem] font-semibold leading-[1.3] text-foreground mb-8 md:mb-12 text-center">
-          How I Can Help
-        </h2>
+    <section id="services" className="py-24 bg-muted">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.1 }}
+        className="max-w-7xl mx-auto px-4"
+      >
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <motion.h2
+            variants={staggerItem}
+            className="font-heading text-[1.25rem] md:text-[1.5rem] font-semibold text-foreground mb-4"
+          >
+            What I Offer
+          </motion.h2>
 
+          <motion.p
+            variants={staggerItem}
+            className="text-muted-foreground max-w-2xl mx-auto"
+          >
+            Clear scope, honest pricing, real outcomes.
+          </motion.p>
+        </div>
+
+        {/* Service Tier Grid */}
         <motion.div
           variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
         >
           {services.map((service) => {
-            const IconComponent = iconMap[service.icon as keyof typeof iconMap]
+            const IconComponent =
+              serviceIconMap[service.icon as keyof typeof serviceIconMap];
 
             return (
-              <motion.div key={service.title} variants={staggerItem}>
-                <Card className="h-full">
-                  <CardHeader>
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-3">
+              <motion.div
+                key={service.title}
+                variants={staggerItem}
+                className="group"
+              >
+                <div className="bg-card border border-border rounded-xl p-8 h-full hover:border-primary/50 transition-colors duration-300 flex flex-col">
+                  {/* Icon + Title */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
                       <IconComponent className="w-5 h-5 text-primary" />
                     </div>
-                    <CardTitle className="font-heading text-lg font-semibold text-foreground">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-base text-muted-foreground leading-[1.6]">
-                      {service.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                    <div>
+                      <h3 className="text-lg font-semibold font-heading text-foreground">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground italic">
+                        {service.subtitle}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                    {service.description}
+                  </p>
+
+                  {/* Deliverable */}
+                  <p className="text-sm text-muted-foreground mb-2">
+                    <span className="font-semibold text-foreground">
+                      You get:
+                    </span>{" "}
+                    {service.deliverable}
+                  </p>
+
+                  {/* Audience */}
+                  <p className="text-sm text-muted-foreground mb-6">
+                    <span className="font-semibold text-foreground">
+                      Best for:
+                    </span>{" "}
+                    {service.audience}
+                  </p>
+
+                  {/* Price + Duration */}
+                  <div className="mt-auto flex items-center justify-between pt-4 border-t border-border">
+                    <div>
+                      <span className="text-xs text-muted-foreground block">
+                        Starting from
+                      </span>
+                      <span className="text-lg font-semibold text-foreground">
+                        {service.startingFrom}
+                      </span>
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground bg-secondary px-3 py-1 rounded-full">
+                      {service.duration}
+                    </span>
+                  </div>
+                </div>
               </motion.div>
-            )
+            );
           })}
         </motion.div>
-      </div>
-    </motion.section>
-  )
+
+        {/* Call to action */}
+        <motion.div variants={staggerItem} className="text-center mt-16">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => {
+              const element = document.querySelector("#contact");
+              if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center gap-2"
+          >
+            Let&apos;s Talk
+            <ArrowRight
+              size={20}
+              className="group-hover:translate-x-1 transition-transform duration-300"
+            />
+          </motion.button>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
 }
