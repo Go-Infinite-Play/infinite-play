@@ -115,7 +115,10 @@ Plans:
   2. Contact form with proper validation (react-hook-form + zod) provides an alternative path to reach Jeremy
   3. Multiple contact paths exist: booking widget, contact form, and direct email
   4. Form submissions are validated on both client and server using the same schema
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 07-01-PLAN.md — Calendly booking integration and CTA placement
+- [ ] 07-02-PLAN.md — Contact form with react-hook-form + zod and multiple contact paths
 
 ### Phase 8: Email & Lead Capture
 **Goal**: Visitors who are not ready to book can exchange their email for value, and all form submissions trigger proper notifications
@@ -162,7 +165,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 | 4. Services & Engagement Process | 0/1 | Planning complete | - |
 | 5. Claude Expertise & Content | 0/1 | Planning complete | - |
 | 6. Trust & Social Proof | 0/1 | Planning complete | - |
-| 7. Booking & Contact Infrastructure | 0/TBD | Not started | - |
+| 7. Booking & Contact Infrastructure | 0/2 | Planning complete | - |
 | 8. Email & Lead Capture | 0/TBD | Not started | - |
 | 9. Mobile & Responsive Polish | 0/TBD | Not started | - |
 | 10. SEO & Analytics | 0/TBD | Not started | - |
