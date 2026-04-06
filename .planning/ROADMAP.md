@@ -34,7 +34,10 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Sections follow buyer decision journey order: Hero > Trust > Problem > Services > Process > Results > About > CTA
   3. Framer Motion animations enhance content comprehension without distracting from the message
   4. Design tokens (colors, typography, spacing) are consistent across all sections
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 01-01-PLAN.md — Design tokens, animations, constants, shadcn install
+- [ ] 01-02-PLAN.md — Component rewrites/creation and page assembly
 **UI hint**: yes
 
 ### Phase 2: Hero & Value Proposition
@@ -143,7 +146,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Design System & Layout Foundation | 0/TBD | Not started | - |
+| 1. Design System & Layout Foundation | 0/2 | Planning complete | - |
 | 2. Hero & Value Proposition | 0/TBD | Not started | - |
 | 3. Audience & Problem Messaging | 0/TBD | Not started | - |
 | 4. Services & Engagement Process | 0/TBD | Not started | - |
