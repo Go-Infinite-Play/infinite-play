@@ -258,6 +258,61 @@ export const workflowExamples = [
   }
 ] as const;
 
+// Trust bar credibility markers (TRUST-02)
+export const trustBarItems = [
+  { label: "Teams Helped with Claude", value: "20+" },
+  { label: "Claude Implementations", value: "50+" },
+  { label: "Hours Saved for Clients", value: "1,000+" },
+] as const;
+
+// Results case study snippets (TRUST-03)
+export const resultsItems = [
+  {
+    title: "Operations Team Unburied",
+    context: "50-person professional services firm",
+    before: "Team leads spent 4+ hours every Monday compiling status reports from Slack, email, and project tools",
+    after: "Claude with MCP integrations drafts weekly reports automatically — manager reviews and sends in 20 minutes",
+    result: "3.5 hours saved per week per manager",
+    metric: "Weekly Reports",
+  },
+  {
+    title: "Engineering Velocity Unlocked",
+    context: "Growing SaaS engineering team",
+    before: "Senior developers spent 6+ hours weekly reviewing PRs and writing documentation nobody maintained",
+    after: "Claude Code reviews against team standards, generates documentation that stays in sync with the codebase",
+    result: "4 hours reclaimed per senior dev per week",
+    metric: "Code Review & Docs",
+  },
+  {
+    title: "Customer Insights on Demand",
+    context: "Product team at a B2B SaaS company",
+    before: "PM manually read 200+ support tickets quarterly, spent 2 full days producing an insights deck",
+    after: "Claude API analyzes all tickets, identifies patterns, and produces a structured report with citations",
+    result: "2-day process reduced to 2 hours",
+    metric: "Research Synthesis",
+  },
+] as const;
+
+// About bio content (TRUST-01)
+export const aboutBio = {
+  name: "Jeremy Olken",
+  location: "Denver, CO",
+  headline: "I help teams stop experimenting with Claude and start getting real results.",
+  paragraphs: [
+    "I use Claude every single day — not as a novelty, but as a core part of how I work. Claude Code is my pair programmer. Claude Projects manages my research. MCP servers connect Claude to my tools. I don't just consult on Claude implementation — I live it.",
+    "Before focusing on Claude, I spent years in operations and process optimization helping companies figure out how to actually get things done. That background means I don't start with the technology — I start with your workflows, your bottlenecks, and your team's real problems.",
+    "I started Infinite Play because I kept seeing the same pattern: companies excited about AI but stuck in the experimentation phase. They'd buy Claude licenses, run a few demos, and then... nothing changed. I help teams get past that wall.",
+  ],
+  skills: [
+    "Claude Chat & Projects",
+    "Claude for Teams & Enterprise",
+    "Claude Code & MCP",
+    "API Integrations",
+    "Workflow Design",
+    "Team Training",
+  ],
+} as const;
+
 // Meta information
 export const siteConfig = {
   name: "Infinite Play",
