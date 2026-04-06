@@ -128,7 +128,9 @@ Plans:
   1. Email capture form offers a real lead magnet (Claude setup checklist or similar) gated behind email
   2. Form submissions trigger a confirmation email to the lead via Resend
   3. Jeremy receives a notification email for every form submission with lead details
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 08-01-PLAN.md — Resend integration, lead magnet capture, and notification emails
 
 ### Phase 9: Mobile & Responsive Polish
 **Goal**: The site delivers a complete experience on any device with light and dark mode support
@@ -138,7 +140,9 @@ Plans:
   1. All sections, forms, and CTAs are fully functional on mobile devices (phone and tablet)
   2. Navigation works on small screens (hamburger menu or equivalent)
   3. Dark mode toggle exists and all components render correctly in both light and dark themes
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 08-01-PLAN.md — Resend integration, lead magnet capture, and notification emails
 **UI hint**: yes
 
 ### Phase 10: SEO & Analytics
@@ -150,7 +154,9 @@ Plans:
   2. Plausible Analytics is integrated and tracking page views and conversion events
   3. Availability indicator ("Currently accepting new clients" or similar) is visible on the site
   4. JSON-LD structured data (Person, ProfessionalService) is present for rich search results
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 08-01-PLAN.md — Resend integration, lead magnet capture, and notification emails
 
 ## Progress
 
