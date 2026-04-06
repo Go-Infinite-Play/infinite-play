@@ -22,22 +22,40 @@ export const trustBarItems = [
   { label: "Client Satisfaction", value: "100%" },
 ] as const
 
-// Problem section pain points
-export const problemPoints = [
+// Audience section intro
+export const audienceSectionIntro = {
+  heading: "Who I Work With",
+  subheading: "I help three types of people get real, lasting value from Claude.",
+} as const
+
+// Audience segments -- who I help and their specific pain points
+export const audienceSegments = [
   {
-    title: "Bought Claude, Now What?",
-    description: "Your team has access to Claude but nobody knows how to use it beyond basic chat.",
-    icon: "HelpCircle",
+    id: "smb-founders",
+    label: "Small Teams & Founders",
+    icon: "Building2",
+    problem: "You bought Claude for your team. A few people tried it for a week, then went back to doing things the old way.",
+    painPoint: "You know there is value here, but nobody has time to figure out where Claude actually fits into your workflows.",
+    cta: "See how I help small teams",
+    ctaHref: "#services",
   },
   {
-    title: "AI Pilot Graveyard",
-    description: "You have tried AI tools before but nothing stuck past the first week.",
-    icon: "Archive",
+    id: "mid-market-teams",
+    label: "Growing Companies",
+    icon: "Users",
+    problem: "Some departments are using Claude daily. Others have not touched it. There is no shared playbook and no internal champion.",
+    painPoint: "You need someone to build the bridge between early adopters and the rest of the organization — without a six-month consulting engagement.",
+    cta: "See how I help growing teams",
+    ctaHref: "#services",
   },
   {
-    title: "Falling Behind",
-    description: "Competitors are shipping faster with AI while your team is still copy-pasting into ChatGPT.",
-    icon: "TrendingDown",
+    id: "knowledge-workers",
+    label: "Independent Professionals",
+    icon: "Briefcase",
+    problem: "You see peers shipping faster and producing more with AI. You have tried Claude a few times but are not getting the results they seem to get.",
+    painPoint: "You do not need a course or a certification. You need someone to sit with you, look at your actual work, and show you where Claude fits.",
+    cta: "See how I help professionals",
+    ctaHref: "#services",
   },
 ] as const
 
