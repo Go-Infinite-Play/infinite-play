@@ -130,7 +130,7 @@ Plans:
   3. Jeremy receives a notification email for every form submission with lead details
 **Plans**: 1 plan
 Plans:
-- [ ] 08-01-PLAN.md — Resend integration, lead magnet capture, and notification emails
+- [x] 08-01-PLAN.md — Resend integration, lead magnet capture, and notification emails
 
 ### Phase 9: Mobile & Responsive Polish
 **Goal**: The site delivers a complete experience on any device with light and dark mode support
@@ -142,7 +142,7 @@ Plans:
   3. Dark mode toggle exists and all components render correctly in both light and dark themes
 **Plans**: 1 plan
 Plans:
-- [ ] 08-01-PLAN.md — Resend integration, lead magnet capture, and notification emails
+- [x] 08-01-PLAN.md — Resend integration, lead magnet capture, and notification emails
 **UI hint**: yes
 
 ### Phase 10: SEO & Analytics
