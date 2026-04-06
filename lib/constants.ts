@@ -15,6 +15,7 @@ export const colors = {
 export const navigationItems = [
   { href: "#how-we-work", label: "How We Work" },
   { href: "#services", label: "Services" },
+  { href: "#expertise", label: "Expertise" },
   { href: "#about", label: "About" },
 ] as const;
 
