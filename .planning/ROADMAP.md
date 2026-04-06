@@ -140,9 +140,10 @@ Plans:
   1. All sections, forms, and CTAs are fully functional on mobile devices (phone and tablet)
   2. Navigation works on small screens (hamburger menu or equivalent)
   3. Dark mode toggle exists and all components render correctly in both light and dark themes
-**Plans**: 1 plan
+**Plans**: 2 plans
 Plans:
-- [x] 08-01-PLAN.md — Resend integration, lead magnet capture, and notification emails
+- [ ] 09-01-PLAN.md — Dark mode infrastructure with next-themes and theme toggle
+- [ ] 09-02-PLAN.md — Mobile responsive audit and polish across all components
 **UI hint**: yes
 
 ### Phase 10: SEO & Analytics
@@ -173,5 +174,5 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 | 6. Trust & Social Proof | 0/1 | Planning complete | - |
 | 7. Booking & Contact Infrastructure | 0/2 | Planning complete | - |
 | 8. Email & Lead Capture | 0/TBD | Not started | - |
-| 9. Mobile & Responsive Polish | 0/TBD | Not started | - |
+| 9. Mobile & Responsive Polish | 0/2 | Planning complete | - |
 | 10. SEO & Analytics | 0/TBD | Not started | - |
