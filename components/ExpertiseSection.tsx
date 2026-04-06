@@ -43,10 +43,10 @@ export default function ExpertiseSection() {
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
           <h2 className="font-heading text-[1.25rem] md:text-[1.5rem] font-semibold leading-[1.3] text-foreground mb-4">
-            Deep Claude Expertise
+            The Full Claude Toolkit
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            I don&apos;t just consult about AI. I work with the full Claude product line every day — and I&apos;ll set your team up on exactly the right tools.
+            I work with the full product line every day. Here&apos;s exactly what I set up for teams — and how each piece fits.
           </p>
         </div>
 

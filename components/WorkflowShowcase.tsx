@@ -21,7 +21,7 @@ export default function WorkflowShowcase() {
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-12">
           <h2 className="font-heading text-[1.25rem] md:text-[1.5rem] font-semibold leading-[1.3] text-foreground mb-4">
-            How Teams Actually Use Claude
+            Real Workflows, Real Results
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Not hypothetical. These are the kinds of workflows I build with clients every week.

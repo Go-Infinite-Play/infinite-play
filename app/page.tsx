@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import WhyClaude from "@/components/WhyClaude";
 import ProblemSection from "@/components/ProblemSection";
 import Services from "@/components/Services";
 import Process from "@/components/Process";
@@ -20,6 +21,7 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
+        <WhyClaude />
         <ProblemSection />
         <Services />
         <Process />
