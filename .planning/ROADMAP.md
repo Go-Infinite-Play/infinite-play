@@ -90,7 +90,7 @@ Plans:
   3. Static practical content shows Claude knowledge depth that a generalist AI consultant could not produce
 **Plans**: 1 plan
 Plans:
-- [ ] 05-01-PLAN.md — Claude product taxonomy grid, before/after workflow showcase, and page integration
+- [x] 05-01-PLAN.md — Claude product taxonomy grid, before/after workflow showcase, and page integration
 **UI hint**: yes
 
 ### Phase 6: Trust & Social Proof
