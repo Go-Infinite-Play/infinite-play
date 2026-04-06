@@ -1,154 +1,181 @@
-// Hero content -- above-the-fold positioning copy
-export const heroContent = {
-  headline: "I help teams get real value from Claude",
-  subhead: "Setup, workflow redesign, and hands-on training for teams that want to actually use Claude — not just talk about it.",
-  primaryCta: "Book a Discovery Call",
-  secondaryCta: "See What I Offer",
-  secondaryCtaHref: "#services",
-} as const
+// Color palette
+export const colors = {
+  primary: "#FB5B3D",
+  darkBg: "#1A1A1A",
+  darkerBg: "#0D0D0D",
+  lightText: "#FAFAFA",
+  mutedText: "#A3A3A3",
+  accentLight: "#FFF7F5",
+  borderDivider: "#2A2A2A",
+  successGreen: "#10B981",
+  cardBg: "#1F1F1F",
+} as const;
 
-// Navigation items -- updated for new section order
+// Navigation items
 export const navigationItems = [
+  { href: "#how-we-work", label: "How We Work" },
   { href: "#services", label: "Services" },
-  { href: "#process", label: "Process" },
-  { href: "#results", label: "Results" },
   { href: "#about", label: "About" },
-] as const
+] as const;
 
-// TrustBar placeholder items
-export const trustBarItems = [
-  { label: "Teams Helped", value: "20+" },
-  { label: "Claude Implementations", value: "50+" },
-  { label: "Client Satisfaction", value: "100%" },
-] as const
+// Hero rotating words
+export const heroRotatingWords = [
+  "Transformation",
+  "Strategy", 
+  "Implementation",
+  "Automation",
+  "Innovation"
+] as const;
 
-// Audience section intro
-export const audienceSectionIntro = {
-  heading: "Who I Work With",
-  subheading: "I help three types of people get real, lasting value from Claude.",
-} as const
+// Company stats
+export const stats = [
+  { label: "Discovery Sessions Completed", value: "50+", suffix: "" },
+  { label: "Processes Optimized", value: "200+", suffix: "" },
+  { label: "ROI Average", value: "3.5", suffix: "x" },
+  { label: "Implementation Time", value: "<90", suffix: " days" },
+] as const;
 
-// Audience segments -- who I help and their specific pain points
-export const audienceSegments = [
-  {
-    id: "smb-founders",
-    label: "Small Teams & Founders",
-    icon: "Building2",
-    problem: "You bought Claude for your team. A few people tried it for a week, then went back to doing things the old way.",
-    painPoint: "You know there is value here, but nobody has time to figure out where Claude actually fits into your workflows.",
-    cta: "See how I help small teams",
-    ctaHref: "#services",
-  },
-  {
-    id: "mid-market-teams",
-    label: "Growing Companies",
-    icon: "Users",
-    problem: "Some departments are using Claude daily. Others have not touched it. There is no shared playbook and no internal champion.",
-    painPoint: "You need someone to build the bridge between early adopters and the rest of the organization — without a six-month consulting engagement.",
-    cta: "See how I help growing teams",
-    ctaHref: "#services",
-  },
-  {
-    id: "knowledge-workers",
-    label: "Independent Professionals",
-    icon: "Briefcase",
-    problem: "You see peers shipping faster and producing more with AI. You have tried Claude a few times but are not getting the results they seem to get.",
-    painPoint: "You do not need a course or a certification. You need someone to sit with you, look at your actual work, and show you where Claude fits.",
-    cta: "See how I help professionals",
-    ctaHref: "#services",
-  },
-] as const
-
-// Process steps -- simplified for Claude consulting
+// Process steps
 export const processSteps = [
   {
     number: "01",
     title: "Talk",
-    description: "30-minute discovery call to understand your team, tools, and goals.",
-    icon: "MessageSquare",
+    description: "Book a free 30-minute discovery call. I'll learn about your team, your tools, and where Claude fits.",
+    icon: "MessageSquare"
   },
   {
     number: "02",
     title: "Plan",
-    description: "Custom implementation roadmap with specific Claude workflows for your use cases.",
-    icon: "Map",
+    description: "I'll put together a custom implementation roadmap — specific Claude workflows mapped to your actual use cases.",
+    icon: "Map"
   },
   {
     number: "03",
     title: "Execute",
-    description: "Hands-on setup, training, and workflow integration with your team.",
-    icon: "Rocket",
+    description: "Hands-on setup, training, and workflow integration. I work alongside your team, not from the sidelines.",
+    icon: "Rocket"
   },
   {
     number: "04",
     title: "Results",
-    description: "Measurable outcomes: faster workflows, better output, confident team.",
-    icon: "CheckCircle",
-  },
-] as const
+    description: "Faster workflows, better output, and a team that's confident using Claude every day.",
+    icon: "CheckCircle"
+  }
+] as const;
 
-// Services -- placeholder for Phase 4 detail
+// Services
 export const services = [
   {
-    title: "Quick-Start Setup",
-    description: "Get your team productive with Claude in one week. Workspace setup, prompt libraries, and hands-on training.",
+    title: "Team Workshop",
+    subtitle: "Get your whole team using Claude effectively in one day",
+    description: "Half-day or full-day hands-on training tailored to your team's actual workflows. Everyone leaves with prompts, templates, and confidence.",
+    deliverable: "Custom prompt library + workflow templates for your team",
+    audience: "Teams that bought Claude but haven't seen adoption stick",
+    startingFrom: "$2,000",
+    icon: "GraduationCap",
+    duration: "Half-day or full-day"
+  },
+  {
+    title: "Claude Quick-Start",
+    subtitle: "From zero to productive with Claude in one week",
+    description: "A focused 2-4 hour assessment of your workflows, followed by workspace setup, prompt libraries, and hands-on training so your team is productive immediately.",
+    deliverable: "Action plan + configured workspace + prompt library",
+    audience: "Small teams and founders ready to start using Claude now",
+    startingFrom: "$1,500",
     icon: "Zap",
+    duration: "2-4 hours + follow-up"
   },
   {
     title: "Implementation Sprint",
-    description: "Deep workflow redesign over 2-4 weeks. We rebuild your core processes around Claude.",
+    subtitle: "Rebuild your core workflows around Claude",
+    description: "A 1-2 week deep engagement where I embed with your team, redesign key processes around Claude, set up the environment, and train everyone on the new workflows.",
+    deliverable: "Configured environment + redesigned workflows + trained team",
+    audience: "Growing companies ready to make Claude a real part of how they work",
+    startingFrom: "$5,000",
     icon: "Code",
+    duration: "1-2 weeks"
   },
   {
-    title: "Ongoing Retainer",
-    description: "Monthly partnership for teams scaling Claude usage. New workflows, training, and optimization.",
+    title: "Ongoing Advisory",
+    subtitle: "A Claude expert in your corner, month after month",
+    description: "Monthly check-ins, async support, and continuous optimization as your team's Claude usage matures. New workflows, troubleshooting, and strategy as Anthropic ships new features.",
+    deliverable: "Monthly strategy sessions + async support + new workflow builds",
+    audience: "Teams scaling Claude usage who want a dedicated expert on call",
+    startingFrom: "$2,000/mo",
     icon: "RefreshCw",
-  },
-] as const
+    duration: "Monthly"
+  }
+] as const;
 
-// Results section placeholder items
-export const resultsItems = [
+// Value propositions
+export const valueProps = [
   {
-    before: "4 hours drafting proposals",
-    after: "45 minutes with Claude-assisted workflow",
-    metric: "82% faster",
+    title: "Practical, Not Theoretical",
+    description: "We focus on implementable solutions that work in the real world",
+    icon: "CheckCircle"
   },
   {
-    before: "Manual data analysis in spreadsheets",
-    after: "Automated analysis pipeline with Claude",
-    metric: "10x throughput",
+    title: "Size-Appropriate Solutions", 
+    description: "Tailored for small to mid-market companies, not enterprise complexity",
+    icon: "Target"
   },
   {
-    before: "Inconsistent customer responses",
-    after: "Brand-consistent replies in seconds",
-    metric: "3x response speed",
+    title: "End-to-End Partnership",
+    description: "From strategy through implementation and beyond",
+    icon: "ArrowRight"
   },
-] as const
+  {
+    title: "ROI-Focused Approach",
+    description: "Every recommendation tied to measurable business outcomes", 
+    icon: "TrendingUp"
+  }
+] as const;
+
+// Founder credentials
+export const credentials = [
+  "Strategic Leadership",
+  "Process Optimization Expert",
+  "EOS Implementer", 
+  "AI Integration Specialist"
+] as const;
 
 // Footer links
 export const footerLinks = {
   company: [
-    { label: "Services", href: "#services" },
-    { label: "Process", href: "#process" },
-    { label: "Results", href: "#results" },
     { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Process", href: "#how-we-work" },
+    { label: "Contact", href: "#contact" }
+  ],
+  resources: [
+    { label: "Blog", href: "#" },
+    { label: "Case Studies", href: "#" },
+    { label: "AI Readiness Quiz", href: "#" }
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-  ],
-} as const
+    { label: "Terms of Service", href: "/terms" }
+  ]
+} as const;
 
 // Contact information
 export const contactInfo = {
   email: "jeremy@infiniteplay.ai",
   linkedin: "https://www.linkedin.com/in/jeremyolken/",
-  location: "Denver, CO",
-} as const
+  location: "Denver, CO"
+} as const;
 
-// Site config
+// Meta information
 export const siteConfig = {
   name: "Infinite Play",
-  description: "Claude implementation consulting -- helping teams get real value from Claude.",
-  tagline: "Claude Implementation Consulting",
-} as const
+  description: "Transform your business with AI. We help small to mid-market companies discover, implement, and scale AI solutions through our proven three-step process.",
+  tagline: "Transforming businesses, one AI solution at a time.",
+  keywords: [
+    "AI consulting",
+    "AI transformation", 
+    "business automation",
+    "AI implementation",
+    "small business AI",
+    "AI strategy"
+  ]
+} as const;
