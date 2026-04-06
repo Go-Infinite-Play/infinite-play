@@ -103,7 +103,7 @@ Plans:
   3. 2-3 inline case study snippets show before/after results with specific outcomes (stubs acceptable for launch)
 **Plans**: 1 plan
 Plans:
-- [ ] 06-01-PLAN.md — Trust data constants, About/TrustBar/ResultsSection with real content
+- [x] 06-01-PLAN.md — Trust data constants, About/TrustBar/ResultsSection with real content
 **UI hint**: yes
 
 ### Phase 7: Booking & Contact Infrastructure
