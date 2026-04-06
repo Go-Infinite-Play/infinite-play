@@ -6,10 +6,10 @@ import {
   Zap,
   Code,
   RefreshCw,
-  ArrowRight,
 } from "lucide-react";
 import { services } from "@/lib/constants";
 import { staggerContainer, staggerItem } from "@/lib/animations";
+import CalendlyButton from "@/components/CalendlyButton";
 
 const serviceIconMap = {
   GraduationCap: GraduationCap,
@@ -118,24 +118,11 @@ export default function Services() {
         </motion.div>
 
         {/* Call to action */}
-        <motion.div variants={staggerItem} className="text-center mt-16">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => {
-              const element = document.querySelector("#contact");
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-            className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center gap-2"
-          >
-            Let&apos;s Talk
-            <ArrowRight
-              size={20}
-              className="group-hover:translate-x-1 transition-transform duration-300"
-            />
-          </motion.button>
+        <motion.div variants={staggerItem} className="text-center mt-16 space-y-4">
+          <p className="text-muted-foreground text-base">
+            Not sure which service fits?
+          </p>
+          <CalendlyButton />
         </motion.div>
       </motion.div>
     </section>

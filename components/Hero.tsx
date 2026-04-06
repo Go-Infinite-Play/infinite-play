@@ -1,11 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { staggerContainer, staggerItem, buttonHover } from "@/lib/animations"
 import { Button } from "@/components/ui/button"
 import { heroContent } from "@/lib/constants"
+import CalendlyButton from "@/components/CalendlyButton"
 
 export default function Hero() {
   const scrollToSection = (href: string) => {
@@ -42,20 +42,7 @@ export default function Hero() {
               variants={staggerItem}
               className="flex flex-col sm:flex-row items-start gap-4"
             >
-              <motion.div
-                variants={buttonHover}
-                initial="rest"
-                whileHover="hover"
-                whileTap="tap"
-              >
-                <Button
-                  className="bg-primary text-primary-foreground px-8 py-4 text-base font-semibold"
-                  onClick={() => scrollToSection("#contact")}
-                >
-                  {heroContent.primaryCta}
-                  <ArrowRight size={18} className="ml-2" />
-                </Button>
-              </motion.div>
+              <CalendlyButton className="bg-primary text-primary-foreground px-8 py-4 text-base font-semibold" />
 
               <motion.div
                 variants={buttonHover}

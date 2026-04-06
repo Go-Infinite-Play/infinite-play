@@ -1,18 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
-import { sectionFadeIn, staggerContainer, staggerItem, buttonHover } from "@/lib/animations"
-import { Button } from "@/components/ui/button"
+import { Mail } from "lucide-react"
+import { sectionFadeIn, staggerContainer, staggerItem } from "@/lib/animations"
+import CalendlyButton from "@/components/CalendlyButton"
+import { contactInfo } from "@/lib/constants"
 
 export default function CTA() {
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
   return (
     <motion.section
       id="contact"
@@ -45,21 +39,18 @@ export default function CTA() {
           </motion.p>
 
           <motion.div variants={staggerItem}>
-            <motion.div
-              variants={buttonHover}
-              initial="rest"
-              whileHover="hover"
-              whileTap="tap"
-              className="inline-block"
+            <CalendlyButton />
+          </motion.div>
+
+          <motion.div variants={staggerItem} className="pt-2">
+            <p className="text-sm text-muted-foreground mb-2">Or reach out directly:</p>
+            <a
+              href={`mailto:${contactInfo.email}`}
+              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
             >
-              <Button
-                className="bg-primary text-primary-foreground px-8 py-4 text-base font-semibold"
-                onClick={() => scrollToSection("#contact")}
-              >
-                Book a Discovery Call
-                <ArrowRight size={18} className="ml-2" />
-              </Button>
-            </motion.div>
+              <Mail size={16} />
+              {contactInfo.email}
+            </a>
           </motion.div>
         </motion.div>
       </div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { ArrowDown } from "lucide-react"
 import { sectionFadeIn, staggerContainer, staggerItem } from "@/lib/animations"
 import { resultsItems } from "@/lib/constants"
+import CalendlyButton from "@/components/CalendlyButton"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
@@ -58,6 +59,16 @@ export default function ResultsSection() {
               </Card>
             </motion.div>
           ))}
+        </motion.div>
+
+        <motion.div
+          variants={staggerItem}
+          className="text-center mt-12 space-y-4"
+        >
+          <p className="text-muted-foreground text-base">
+            Ready to see results like these?
+          </p>
+          <CalendlyButton />
         </motion.div>
       </div>
     </motion.section>
