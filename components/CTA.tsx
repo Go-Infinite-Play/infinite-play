@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Mail } from "lucide-react"
 import { sectionFadeIn, staggerContainer, staggerItem } from "@/lib/animations"
 import CalendlyButton from "@/components/CalendlyButton"
+import ContactForm from "@/components/ContactForm"
 import { contactInfo } from "@/lib/constants"
 
 export default function CTA() {
@@ -51,6 +52,13 @@ export default function CTA() {
               <Mail size={16} />
               {contactInfo.email}
             </a>
+          </motion.div>
+
+          <motion.div variants={staggerItem} className="pt-8">
+            <h3 className="text-base font-medium text-foreground mb-4">
+              Or send a message:
+            </h3>
+            <ContactForm />
           </motion.div>
         </motion.div>
       </div>

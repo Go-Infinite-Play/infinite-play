@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, MapPin, Linkedin, ArrowUp } from "lucide-react"
+import { Mail, MapPin, Linkedin, ArrowUp, Calendar, MessageSquare } from "lucide-react"
 import { footerLinks, contactInfo, siteConfig } from "@/lib/constants"
 import { staggerContainer, staggerItem, buttonHover } from "@/lib/animations"
 
@@ -69,6 +69,28 @@ export default function Footer() {
                 <Linkedin className="w-4 h-4" />
                 <span className="text-sm">LinkedIn Profile</span>
               </motion.a>
+
+              <motion.button
+                variants={buttonHover}
+                initial="rest"
+                whileHover="hover"
+                onClick={() => scrollToSection("#contact")}
+                className="flex items-center gap-3 text-background/70 hover:text-background transition-colors"
+              >
+                <Calendar className="w-4 h-4" />
+                <span className="text-sm">Book a Discovery Call</span>
+              </motion.button>
+
+              <motion.button
+                variants={buttonHover}
+                initial="rest"
+                whileHover="hover"
+                onClick={() => scrollToSection("#contact")}
+                className="flex items-center gap-3 text-background/70 hover:text-background transition-colors"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span className="text-sm">Send a message</span>
+              </motion.button>
             </div>
           </motion.div>
 
