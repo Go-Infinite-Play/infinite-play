@@ -50,7 +50,7 @@ Plans:
   3. Tone is direct and practical throughout -- zero corporate jargon, zero AI buzzwords, zero urgency tactics
 **Plans**: 1 plan
 Plans:
-- [ ] 02-01-PLAN.md — Hero copy, headshot layout, and CTA wiring
+- [x] 02-01-PLAN.md — Hero copy, headshot layout, and CTA wiring
 **UI hint**: yes
 
 ### Phase 3: Audience & Problem Messaging
