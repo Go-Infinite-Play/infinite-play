@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { generateStructuredData } from "@/lib/structured-data";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,38 +15,43 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://infiniteplay.ai'),
-  title: "Infinite Play - AI Transformation Partner for Growing Companies",
-  description: "Transform your business with AI. We help small to mid-market companies discover, implement, and scale AI solutions through our proven three-step process.",
+  title: "Infinite Play | Claude Implementation Consulting — Jeremy Olken",
+  description: "I help teams move past the experimentation phase with Claude and build real workflows that save hours every week. Claude implementation consulting for businesses ready to get results.",
   keywords: [
-    "AI consulting",
-    "AI transformation", 
-    "business automation",
-    "AI implementation",
-    "small business AI",
-    "AI strategy"
+    "Claude implementation consultant",
+    "Claude consulting",
+    "Claude for business",
+    "Claude enterprise setup",
+    "AI workflow consulting",
+    "Claude Code consultant",
+    "MCP integration",
+    "Anthropic Claude consulting"
   ],
-  authors: [{ name: "Infinite Play" }],
-  creator: "Infinite Play",
+  authors: [{ name: "Jeremy Olken" }],
+  creator: "Jeremy Olken",
+  alternates: {
+    canonical: "https://infiniteplay.ai",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://infiniteplay.ai",
-    title: "Infinite Play - AI Transformation Partner",
-    description: "Transform your business with AI through our proven three-step process.",
+    title: "Infinite Play | Claude Implementation Consulting",
+    description: "I help teams move past the experimentation phase with Claude and build real workflows that save hours every week.",
     siteName: "Infinite Play",
     images: [
       {
         url: "/infinite-play-logo.png",
         width: 1200,
         height: 630,
-        alt: "Infinite Play - AI Transformation Partner",
+        alt: "Infinite Play | Claude Implementation Consulting",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Infinite Play - AI Transformation Partner",
-    description: "Transform your business with AI through our proven three-step process.",
+    title: "Infinite Play | Claude Implementation Consulting",
+    description: "I help teams move past the experimentation phase with Claude and build real workflows that save hours every week.",
     images: ["/infinite-play-logo.png"],
   },
   icons: {
@@ -64,6 +70,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateStructuredData()) }}
+        />
         {children}
       </body>
     </html>
