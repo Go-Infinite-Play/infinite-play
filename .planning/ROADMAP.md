@@ -61,7 +61,9 @@ Plans:
   1. SMB founders, mid-market teams, and knowledge workers each encounter copy that speaks to their situation
   2. Audience segment cards or sections use language each persona would use to describe their own problem
   3. Each audience segment has a distinct entry point that routes them toward relevant services
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 03-01-PLAN.md — Audience segment constants and card-based routing component
 **UI hint**: yes
 
 ### Phase 4: Services & Engagement Process
@@ -150,7 +152,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 |-------|----------------|--------|-----------|
 | 1. Design System & Layout Foundation | 0/2 | Planning complete | - |
 | 2. Hero & Value Proposition | 0/1 | Planning complete | - |
-| 3. Audience & Problem Messaging | 0/TBD | Not started | - |
+| 3. Audience & Problem Messaging | 0/1 | Planning complete | - |
 | 4. Services & Engagement Process | 0/TBD | Not started | - |
 | 5. Claude Expertise & Content | 0/TBD | Not started | - |
 | 6. Trust & Social Proof | 0/TBD | Not started | - |
