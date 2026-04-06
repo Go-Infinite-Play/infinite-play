@@ -63,7 +63,7 @@ Plans:
   3. Each audience segment has a distinct entry point that routes them toward relevant services
 **Plans**: 1 plan
 Plans:
-- [ ] 03-01-PLAN.md — Audience segment constants and card-based routing component
+- [x] 03-01-PLAN.md — Audience segment constants and card-based routing component
 **UI hint**: yes
 
 ### Phase 4: Services & Engagement Process
