@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import { generateStructuredData } from "@/lib/structured-data";
 import "./globals.css";
 
@@ -70,6 +71,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased`}
       >
+        <Script
+          defer
+          data-domain="infiniteplay.ai"
+          src="https://plausible.io/js/script.js"
+          strategy="afterInteractive"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(generateStructuredData()) }}

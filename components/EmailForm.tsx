@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, ArrowRight, CheckCircle, AlertCircle } from "lucide-react";
 import { buttonHover } from "@/lib/animations";
+import { trackEvent } from "@/lib/analytics";
 
 interface EmailFormProps {
   placeholder?: string;
@@ -46,7 +47,8 @@ export default function EmailForm({
       }
 
       await response.json();
-      
+
+      trackEvent("Contact Form Submit");
       setStatus("success");
       setMessage("🎉 Boom! Your email just landed in our inbox faster than ChatGPT can say 'I'm sorry, I can't help with that.' We'll be in touch within 24 hours!");
       setEmail("");
