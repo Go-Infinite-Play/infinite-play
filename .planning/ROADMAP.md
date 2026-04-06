@@ -117,8 +117,8 @@ Plans:
   4. Form submissions are validated on both client and server using the same schema
 **Plans**: 2 plans
 Plans:
-- [ ] 07-01-PLAN.md — Calendly booking integration and CTA placement
-- [ ] 07-02-PLAN.md — Contact form with react-hook-form + zod and multiple contact paths
+- [x] 07-01-PLAN.md — Calendly booking integration and CTA placement
+- [x] 07-02-PLAN.md — Contact form with react-hook-form + zod and multiple contact paths
 
 ### Phase 8: Email & Lead Capture
 **Goal**: Visitors who are not ready to book can exchange their email for value, and all form submissions trigger proper notifications
