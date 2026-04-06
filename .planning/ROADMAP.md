@@ -101,7 +101,9 @@ Plans:
   1. Professional headshot and authentic personal bio are visible, establishing Jeremy as a real person
   2. Social proof section displays testimonials or credibility markers (with name, role, company where possible)
   3. 2-3 inline case study snippets show before/after results with specific outcomes (stubs acceptable for launch)
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 06-01-PLAN.md — Trust data constants, About/TrustBar/ResultsSection with real content
 **UI hint**: yes
 
 ### Phase 7: Booking & Contact Infrastructure
@@ -159,7 +161,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 | 3. Audience & Problem Messaging | 0/1 | Planning complete | - |
 | 4. Services & Engagement Process | 0/1 | Planning complete | - |
 | 5. Claude Expertise & Content | 0/1 | Planning complete | - |
-| 6. Trust & Social Proof | 0/TBD | Not started | - |
+| 6. Trust & Social Proof | 0/1 | Planning complete | - |
 | 7. Booking & Contact Infrastructure | 0/TBD | Not started | - |
 | 8. Email & Lead Capture | 0/TBD | Not started | - |
 | 9. Mobile & Responsive Polish | 0/TBD | Not started | - |
