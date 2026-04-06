@@ -86,38 +86,38 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| COPY-01 | TBD | Pending |
-| COPY-02 | TBD | Pending |
-| COPY-03 | TBD | Pending |
-| COPY-04 | TBD | Pending |
-| COPY-05 | TBD | Pending |
-| SERV-01 | TBD | Pending |
-| SERV-02 | TBD | Pending |
-| SERV-03 | TBD | Pending |
-| SERV-04 | TBD | Pending |
-| SERV-05 | TBD | Pending |
-| CONV-01 | TBD | Pending |
-| CONV-02 | TBD | Pending |
-| CONV-03 | TBD | Pending |
-| CONV-04 | TBD | Pending |
-| CONV-05 | TBD | Pending |
-| TRUST-01 | TBD | Pending |
-| TRUST-02 | TBD | Pending |
-| TRUST-03 | TBD | Pending |
-| TRUST-04 | TBD | Pending |
-| DSGN-01 | TBD | Pending |
-| DSGN-02 | TBD | Pending |
-| DSGN-03 | TBD | Pending |
-| DSGN-04 | TBD | Pending |
-| DSGN-05 | TBD | Pending |
-| DSGN-06 | TBD | Pending |
-| DSGN-07 | TBD | Pending |
+| COPY-01 | Phase 2 | Pending |
+| COPY-02 | Phase 3 | Pending |
+| COPY-03 | Phase 2 | Pending |
+| COPY-04 | Phase 5 | Pending |
+| COPY-05 | Phase 5 | Pending |
+| SERV-01 | Phase 4 | Pending |
+| SERV-02 | Phase 4 | Pending |
+| SERV-03 | Phase 7 | Pending |
+| SERV-04 | Phase 4 | Pending |
+| SERV-05 | Phase 3 | Pending |
+| CONV-01 | Phase 7 | Pending |
+| CONV-02 | Phase 9 | Pending |
+| CONV-03 | Phase 10 | Pending |
+| CONV-04 | Phase 8 | Pending |
+| CONV-05 | Phase 10 | Pending |
+| TRUST-01 | Phase 6 | Pending |
+| TRUST-02 | Phase 6 | Pending |
+| TRUST-03 | Phase 6 | Pending |
+| TRUST-04 | Phase 5 | Pending |
+| DSGN-01 | Phase 1 | Pending |
+| DSGN-02 | Phase 10 | Pending |
+| DSGN-03 | Phase 9 | Pending |
+| DSGN-04 | Phase 1 | Pending |
+| DSGN-05 | Phase 7 | Pending |
+| DSGN-06 | Phase 8 | Pending |
+| DSGN-07 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 26 total
-- Mapped to phases: 0
-- Unmapped: 26
+- Mapped to phases: 26
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-05*
-*Last updated: 2026-04-05 after initial definition*
+*Last updated: 2026-04-05 after roadmap creation*
