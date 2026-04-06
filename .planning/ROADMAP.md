@@ -48,7 +48,9 @@ Plans:
   1. Above-the-fold content clearly communicates "Claude implementation consulting" -- not generic AI
   2. Headline and subhead pass the 5-second test: a stranger can articulate what Jeremy does after a glance
   3. Tone is direct and practical throughout -- zero corporate jargon, zero AI buzzwords, zero urgency tactics
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 02-01-PLAN.md — Hero copy, headshot layout, and CTA wiring
 **UI hint**: yes
 
 ### Phase 3: Audience & Problem Messaging
@@ -147,7 +149,7 @@ Phases execute in numeric order: 1 > 2 > 3 > 4 > 5 > 6 > 7 > 8 > 9 > 10
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Design System & Layout Foundation | 0/2 | Planning complete | - |
-| 2. Hero & Value Proposition | 0/TBD | Not started | - |
+| 2. Hero & Value Proposition | 0/1 | Planning complete | - |
 | 3. Audience & Problem Messaging | 0/TBD | Not started | - |
 | 4. Services & Engagement Process | 0/TBD | Not started | - |
 | 5. Claude Expertise & Content | 0/TBD | Not started | - |
