@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { ArrowDown } from "lucide-react"
 import { sectionFadeIn, staggerContainer, staggerItem } from "@/lib/animations"
 import { resultsItems } from "@/lib/constants"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 export default function ResultsSection() {
@@ -19,7 +19,7 @@ export default function ResultsSection() {
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-0">
         <h2 className="font-heading text-[1.25rem] md:text-[1.5rem] font-semibold leading-[1.3] text-foreground mb-8 md:mb-12 text-center">
-          Real Results
+          Results That Matter
         </h2>
 
         <motion.div
@@ -32,7 +32,13 @@ export default function ResultsSection() {
           {resultsItems.map((item) => (
             <motion.div key={item.metric} variants={staggerItem}>
               <Card className="h-full">
-                <CardContent className="pt-6 space-y-4">
+                <CardHeader>
+                  <CardTitle className="text-lg">{item.title}</CardTitle>
+                  <p className="text-sm text-muted-foreground italic">
+                    {item.context}
+                  </p>
+                </CardHeader>
+                <CardContent className="space-y-4">
                   <p className="text-muted-foreground line-through text-sm">
                     {item.before}
                   </p>
@@ -43,6 +49,9 @@ export default function ResultsSection() {
                     {item.after}
                   </p>
                   <div className="pt-2">
+                    <Badge variant="secondary">{item.result}</Badge>
+                  </div>
+                  <div>
                     <Badge variant="secondary">{item.metric}</Badge>
                   </div>
                 </CardContent>

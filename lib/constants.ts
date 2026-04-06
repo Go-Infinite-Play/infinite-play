@@ -19,6 +19,51 @@ export const navigationItems = [
   { href: "#about", label: "About" },
 ] as const;
 
+// Hero content
+export const heroContent = {
+  headline: "Your Team Has Claude.\nNow Make It Actually Work.",
+  subhead: "I help teams move past the experimentation phase and build real Claude workflows that save hours every week.",
+  primaryCta: "Book a Discovery Call",
+  secondaryCta: "See How It Works",
+  secondaryCtaHref: "#how-we-work",
+} as const;
+
+// Audience segments (COPY-02)
+export const audienceSectionIntro = {
+  heading: "Sound Familiar?",
+  subheading: "Most teams hit the same wall with Claude. Here is how I help.",
+} as const;
+
+export const audienceSegments = [
+  {
+    id: "leaders",
+    icon: "Building2",
+    label: "Business Leaders",
+    problem: "You bought Claude licenses but adoption stalled after the first week.",
+    painPoint: "You know AI should be saving your team time, but nobody is using it consistently and you can not measure the ROI.",
+    cta: "See services",
+    ctaHref: "#services",
+  },
+  {
+    id: "ops",
+    icon: "Users",
+    label: "Operations & Team Leads",
+    problem: "Your team is drowning in repetitive work that Claude could handle.",
+    painPoint: "Reports, status updates, research synthesis — you know Claude can help but you do not have time to figure out how.",
+    cta: "See results",
+    ctaHref: "#results",
+  },
+  {
+    id: "technical",
+    icon: "Briefcase",
+    label: "Technical Teams",
+    problem: "You have tried Claude Code or the API but can not get it to work with your stack.",
+    painPoint: "MCP servers, custom instructions, API integrations — you need someone who has done this before.",
+    cta: "See expertise",
+    ctaHref: "#expertise",
+  },
+] as const;
+
 // Hero rotating words
 export const heroRotatingWords = [
   "Transformation",

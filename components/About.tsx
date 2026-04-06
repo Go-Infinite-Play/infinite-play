@@ -1,7 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { sectionFadeIn, staggerContainer, staggerItem } from "@/lib/animations"
+import { aboutBio } from "@/lib/constants"
 import { Badge } from "@/components/ui/badge"
 
 export default function About() {
@@ -16,7 +18,7 @@ export default function About() {
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-0">
         <h2 className="font-heading text-[1.25rem] md:text-[1.5rem] font-semibold leading-[1.3] text-foreground mb-8 md:mb-12 text-center">
-          About Jeremy
+          About {aboutBio.name}
         </h2>
 
         <motion.div
@@ -26,23 +28,38 @@ export default function About() {
           viewport={{ once: true, amount: 0.1 }}
           className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12"
         >
-          {/* Placeholder photo */}
+          {/* Headshot */}
           <motion.div variants={staggerItem} className="flex-shrink-0">
-            <div className="w-48 h-48 bg-muted rounded-2xl flex items-center justify-center border border-border">
-              <span className="text-muted-foreground text-sm font-medium">Photo</span>
-            </div>
+            <Image
+              src="/founder-photo.jpg"
+              alt="Jeremy Olken"
+              width={300}
+              height={300}
+              className="rounded-2xl"
+            />
           </motion.div>
 
           {/* Bio content */}
           <motion.div variants={staggerItem} className="space-y-6">
-            <p className="text-base text-muted-foreground leading-[1.6]">
-              Claude implementation consultant based in Denver, CO. I help teams stop experimenting with AI and start getting real results.
+            <p className="text-lg font-semibold text-foreground">
+              {aboutBio.headline}
             </p>
 
-            <div className="flex flex-wrap gap-2">
-              <Badge variant="secondary">Claude Expert</Badge>
-              <Badge variant="secondary">Workflow Design</Badge>
-              <Badge variant="secondary">Team Training</Badge>
+            {aboutBio.paragraphs.map((paragraph, index) => (
+              <p
+                key={index}
+                className="text-base text-muted-foreground leading-[1.6]"
+              >
+                {paragraph}
+              </p>
+            ))}
+
+            <div className="flex flex-wrap gap-2 pt-2">
+              {aboutBio.skills.map((skill) => (
+                <Badge key={skill} variant="secondary">
+                  {skill}
+                </Badge>
+              ))}
             </div>
           </motion.div>
         </motion.div>
