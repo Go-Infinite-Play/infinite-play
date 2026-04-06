@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Error submitting to Airtable:', error);
-    
+
     return NextResponse.json(
       { error: 'Failed to submit email. Please try again.' },
       { status: 500 }

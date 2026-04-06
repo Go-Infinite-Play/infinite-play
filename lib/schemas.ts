@@ -29,3 +29,9 @@ export const serviceOptions = [
   { value: "ongoing-advisory", label: "Ongoing Advisory" },
   { value: "not-sure", label: "Not sure yet" },
 ] as const
+
+export const leadMagnetSchema = z.object({
+  email: z.string().email("Please enter a valid email address"),
+})
+
+export type LeadMagnetData = z.infer<typeof leadMagnetSchema>
