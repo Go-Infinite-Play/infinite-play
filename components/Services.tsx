@@ -41,7 +41,7 @@ export default function Services() {
             variants={staggerItem}
             className="text-muted-foreground max-w-2xl mx-auto"
           >
-            Clear scope, honest pricing, real outcomes.
+            Clear scope, real outcomes.
           </motion.p>
         </div>
 
@@ -90,23 +90,15 @@ export default function Services() {
                   </p>
 
                   {/* Audience */}
-                  <p className="text-sm text-muted-foreground mb-6">
+                  <p className="text-sm text-muted-foreground mb-4">
                     <span className="font-semibold text-foreground">
                       Best for:
                     </span>{" "}
                     {service.audience}
                   </p>
 
-                  {/* Price + Duration */}
-                  <div className="mt-auto flex items-center justify-between pt-4 border-t border-border">
-                    <div>
-                      <span className="text-xs text-muted-foreground block">
-                        Starting from
-                      </span>
-                      <span className="text-lg font-semibold text-foreground">
-                        {service.startingFrom}
-                      </span>
-                    </div>
+                  {/* Duration */}
+                  <div className="mt-auto pt-4 border-t border-border">
                     <span className="text-xs font-medium text-muted-foreground bg-secondary px-3 py-1 rounded-full">
                       {service.duration}
                     </span>
