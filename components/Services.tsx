@@ -1,122 +1,92 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  GraduationCap,
-  Zap,
-  Code,
-  RefreshCw,
-} from "lucide-react";
-import { services } from "@/lib/constants";
-import { staggerContainer, staggerItem } from "@/lib/animations";
-import CalendlyButton from "@/components/CalendlyButton";
-
-const serviceIconMap = {
-  GraduationCap: GraduationCap,
-  Zap: Zap,
-  Code: Code,
-  RefreshCw: RefreshCw,
-};
+import { services, multiModelNote } from "@/lib/constants";
+import { staggerContainer, staggerItem, cardHover } from "@/lib/animations";
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-muted">
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-0"
-      >
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <motion.h2
-            variants={staggerItem}
-            className="font-heading text-[1.25rem] md:text-[1.5rem] font-semibold text-foreground mb-4"
-          >
-            What I Offer
-          </motion.h2>
-
-          <motion.p
-            variants={staggerItem}
-            className="text-muted-foreground max-w-2xl mx-auto"
-          >
-            Clear scope, real outcomes.
-          </motion.p>
-        </div>
-
-        {/* Service Tier Grid */}
+    <section id="services" className="py-20 md:py-28 bg-background border-t border-border">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="max-w-2xl mb-14"
         >
-          {services.map((service) => {
-            const IconComponent =
-              serviceIconMap[service.icon as keyof typeof serviceIconMap];
+          <motion.span
+            variants={staggerItem}
+            className="text-xs font-mono uppercase tracking-[0.18em] text-primary"
+          >
+            What we do
+          </motion.span>
+          <motion.h2
+            variants={staggerItem}
+            className="mt-3 font-heading text-3xl md:text-4xl font-bold tracking-tight text-foreground"
+          >
+            Three ways we work with teams.
+          </motion.h2>
+          <motion.p
+            variants={staggerItem}
+            className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed"
+          >
+            Pick the one that fits where you are — or start with a conversation and we&apos;ll sort the shape together.
+          </motion.p>
+        </motion.div>
 
-            return (
-              <motion.div
-                key={service.title}
-                variants={staggerItem}
-                className="group"
-              >
-                <div className="bg-card border border-border rounded-xl p-8 h-full hover:border-primary/50 transition-colors duration-300 flex flex-col">
-                  {/* Icon + Title */}
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors duration-300">
-                      <IconComponent className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold font-heading text-foreground">
-                        {service.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground italic">
-                        {service.subtitle}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-base text-muted-foreground leading-relaxed mb-6">
-                    {service.description}
-                  </p>
-
-                  {/* Deliverable */}
-                  <p className="text-sm text-muted-foreground mb-2">
-                    <span className="font-semibold text-foreground">
-                      You get:
-                    </span>{" "}
-                    {service.deliverable}
-                  </p>
-
-                  {/* Audience */}
-                  <p className="text-sm text-muted-foreground mb-4">
-                    <span className="font-semibold text-foreground">
-                      Best for:
-                    </span>{" "}
-                    {service.audience}
-                  </p>
-
-                  {/* Duration */}
-                  <div className="mt-auto pt-4 border-t border-border">
-                    <span className="text-xs font-medium text-muted-foreground bg-secondary px-3 py-1 rounded-full">
-                      {service.duration}
-                    </span>
-                  </div>
-                </div>
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-5"
+        >
+          {services.map((service) => (
+            <motion.article
+              key={service.id}
+              variants={staggerItem}
+              whileHover="hover"
+              initial="rest"
+              animate="rest"
+              className="relative rounded-2xl border border-border bg-card p-7 md:p-8 flex flex-col"
+            >
+              <motion.div variants={cardHover} className="flex flex-col h-full">
+                <span className="text-xs font-mono text-muted-foreground">
+                  {service.number}
+                </span>
+                <h3 className="mt-3 font-heading text-xl font-semibold tracking-tight text-foreground">
+                  {service.title}
+                </h3>
+                <p className="mt-1 text-sm text-primary font-medium">
+                  {service.outcome}
+                </p>
+                <p className="mt-4 text-[15px] text-muted-foreground leading-relaxed">
+                  {service.body}
+                </p>
+                <ul className="mt-5 space-y-2">
+                  {service.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="text-sm text-foreground flex items-start gap-2"
+                    >
+                      <span
+                        className="mt-[7px] inline-block h-1 w-1 rounded-full bg-primary shrink-0"
+                        aria-hidden
+                      />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
-            );
-          })}
+            </motion.article>
+          ))}
         </motion.div>
 
-        {/* Call to action */}
-        <motion.div variants={staggerItem} className="text-center mt-16 space-y-4">
-          <p className="text-muted-foreground text-base">
-            Not sure which service fits?
-          </p>
-          <CalendlyButton />
-        </motion.div>
-      </motion.div>
+        <p className="mt-10 text-sm text-muted-foreground max-w-2xl">
+          {multiModelNote}
+        </p>
+      </div>
     </section>
   );
 }
