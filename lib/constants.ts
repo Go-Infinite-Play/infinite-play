@@ -105,22 +105,6 @@ export const caseStudyTeasers = [
       "A full-company AI audit for the casting-software leader, followed by custom agents for customer support and casting verification.",
   },
   {
-    slug: "platinum-balloon",
-    company: "Platinum Balloon",
-    kind: "Custom AI System",
-    headline: "RFP to creative brief, without the grind",
-    oneLiner:
-      "An AI system that expands the problem space of a brief, surfacing sharper, non-obvious insights for agency strategists.",
-  },
-  {
-    slug: "signal-and-cipher",
-    company: "Signal and Cipher",
-    kind: "AI Education Platform",
-    headline: "A generative AI education platform for enterprise upskilling",
-    oneLiner:
-      "As Head of Product Strategy, built a platform that combines static learning, interactive workshops, and hands-on training for tailored client upskilling.",
-  },
-  {
     slug: "hidden-client",
     company: "Hidden Client",
     kind: "Founder-built AI Product",
@@ -169,38 +153,6 @@ export const caseStudies: readonly CaseStudy[] = [
       "Manual review time on casting verification dropped significantly, and the support agent took over the long tail of repetitive tickets. Beyond the two shipped systems, the opportunity map became a multi-quarter AI roadmap the leadership team is still working through.",
   },
   {
-    slug: "platinum-balloon",
-    company: "Platinum Balloon",
-    kind: "Custom AI System",
-    headline: "A strategy engine for agencies",
-    metric: "RFP → brief",
-    metricLabel: "Shortened by days",
-    problem:
-      "Platinum Balloon is an AI product studio for creative agencies, known for Hydrogen AI. Their strategists were spending the better part of a week turning an RFP into a creative brief. Too much of that week went into formatting and scaffolding instead of actually uncovering insights.",
-    approach:
-      "We designed an AI system that handles the scaffolding for them. It ingests the RFP, expands the problem space, and surfaces candidate angles across human insight and unmet needs. Strategists move from blank page to sharp brief with the interesting work still in their hands.",
-    built:
-      "A multi-model workflow that combines retrieval across prior work, structured prompts tuned to the agency's strategy framework, and a review loop that keeps a human in the decisioning seat at every step.",
-    outcome:
-      "Strategists come out of a first pass with a fuller, more defensible brief in a fraction of the time. Pitch win rates improved on briefs the system touched, and the team has capacity to chase ideas they would have cut for time.",
-  },
-  {
-    slug: "signal-and-cipher",
-    company: "Signal and Cipher",
-    kind: "AI Education Platform",
-    metric: "Enterprise",
-    metricLabel: "AI upskilling at scale",
-    headline: "Tailored AI upskilling that actually lands",
-    problem:
-      "Signal and Cipher, founded by Ian Beacraft, works with enterprises like Samsung, Intel, Coca-Cola, Google, Microsoft, Nike, and Universal to help teams adapt to generative AI. Generic training wasn't moving the needle. Clients wanted upskilling that met each function where it worked.",
-    approach:
-      "As Head of Product Strategy, I led the design of a generative AI education platform built around three reinforcing layers. Static learning for foundations, interactive workshops for context, and hands-on training against real client workflows. Curriculum maps changed per client, and the platform made that economical.",
-    built:
-      "A product that combines structured lesson flows, workshop facilitation tooling, prompt libraries, and client-specific practice environments. Instructors configure a program per engagement in hours, not weeks.",
-    outcome:
-      "Clients went from one-off AI workshops to sustained uplift. Signal and Cipher could take bigger engagements with tighter turnarounds, and the platform became the reusable spine of their enterprise work.",
-  },
-  {
     slug: "hidden-client",
     company: "Hidden Client",
     kind: "Founder-built AI Product",
@@ -238,7 +190,7 @@ export const workIntro = {
   eyebrow: "Recent engagements",
   headline: "Here's what we did and how.",
   subhead:
-    "A mix of company-wide audits, shipped systems, education platforms, and founder builds. Each one is real work with a real outcome.",
+    "A mix of company-wide audits, shipped systems, founder builds, and in-house AI practices. Each one is real work with a real outcome.",
 } as const;
 
 export const aboutContent = {
