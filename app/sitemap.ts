@@ -1,12 +1,20 @@
-import type { MetadataRoute } from "next"
+import { MetadataRoute } from "next";
+import { siteConfig } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date();
   return [
     {
-      url: "https://infiniteplay.ai",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
+      url: siteConfig.url,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 1,
     },
-  ]
+    {
+      url: `${siteConfig.url}/work`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+  ];
 }
