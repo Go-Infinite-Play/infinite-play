@@ -1,384 +1,290 @@
-// Color palette
-export const colors = {
-  primary: "#FB5B3D",
-  darkBg: "#1A1A1A",
-  darkerBg: "#0D0D0D",
-  lightText: "#FAFAFA",
-  mutedText: "#A3A3A3",
-  accentLight: "#FFF7F5",
-  borderDivider: "#2A2A2A",
-  successGreen: "#10B981",
-  cardBg: "#1F1F1F",
-} as const;
+// lib/constants.ts
+// Single source of truth for all site copy, links, and structured content.
 
-// Navigation items
-export const navigationItems = [
-  { href: "#how-we-work", label: "How We Work" },
-  { href: "#services", label: "Services" },
-  { href: "#expertise", label: "Expertise" },
-  { href: "#about", label: "About" },
-] as const;
-
-// Hero content
-export const heroContent = {
-  headline: "Your Team Deserves Better\nThan AI Experiments That Go Nowhere.",
-  subhead: "I help teams stop tinkering and start shipping real AI workflows that save hours every week.",
-  primaryCta: "Book a Discovery Call",
-  secondaryCta: "See How It Works",
-  secondaryCtaHref: "#how-we-work",
-} as const;
-
-// Audience segments (COPY-02)
-export const audienceSectionIntro = {
-  heading: "Sound Familiar?",
-  subheading: "Most teams hit the same wall with AI. Here is how I help.",
-} as const;
-
-export const audienceSegments = [
-  {
-    id: "leaders",
-    icon: "Building2",
-    label: "Business Leaders",
-    problem: "You bought AI licenses but adoption stalled after the first week.",
-    painPoint: "You know AI should be saving your team time, but nobody is using it consistently and you can not measure the ROI.",
-    cta: "See services",
-    ctaHref: "#services",
-  },
-  {
-    id: "ops",
-    icon: "Users",
-    label: "Operations & Team Leads",
-    problem: "Your team is drowning in repetitive work that AI could handle.",
-    painPoint: "Reports, status updates, research synthesis — you know there is a better way but you do not have time to figure it out.",
-    cta: "See results",
-    ctaHref: "#results",
-  },
-  {
-    id: "technical",
-    icon: "Briefcase",
-    label: "Technical Teams",
-    problem: "You have tried AI coding tools and APIs but can not get them to work with your stack.",
-    painPoint: "Custom integrations, prompt engineering, API workflows — you need someone who has done this before.",
-    cta: "See expertise",
-    ctaHref: "#expertise",
-  },
-] as const;
-
-// Hero rotating words
-export const heroRotatingWords = [
-  "Transformation",
-  "Strategy", 
-  "Implementation",
-  "Automation",
-  "Innovation"
-] as const;
-
-// Company stats
-export const stats = [
-  { label: "Discovery Sessions Completed", value: "50+", suffix: "" },
-  { label: "Processes Optimized", value: "200+", suffix: "" },
-  { label: "ROI Average", value: "3.5", suffix: "x" },
-  { label: "Implementation Time", value: "<90", suffix: " days" },
-] as const;
-
-// Process steps
-export const processSteps = [
-  {
-    number: "01",
-    title: "Talk",
-    description: "Book a free 30-minute discovery call. I'll learn about your team, your tools, and where AI fits.",
-    icon: "MessageSquare"
-  },
-  {
-    number: "02",
-    title: "Plan",
-    description: "I'll put together a custom implementation roadmap — specific AI workflows mapped to your actual use cases.",
-    icon: "Map"
-  },
-  {
-    number: "03",
-    title: "Execute",
-    description: "Hands-on setup, training, and workflow integration. I work alongside your team, not from the sidelines.",
-    icon: "Rocket"
-  },
-  {
-    number: "04",
-    title: "Results",
-    description: "Faster workflows, better output, and a team that's confident using AI every day.",
-    icon: "CheckCircle"
-  }
-] as const;
-
-// Services
-export const services = [
-  {
-    title: "Team Workshop",
-    subtitle: "Get your whole team productive with AI in one day",
-    description: "Half-day or full-day hands-on training tailored to your team's actual workflows. Everyone leaves with prompts, templates, and confidence.",
-    deliverable: "Custom prompt library + workflow templates for your team",
-    audience: "Teams that bought AI licenses but haven't seen adoption stick",
-    startingFrom: "$2,000",
-    icon: "GraduationCap",
-    duration: "Half-day or full-day"
-  },
-  {
-    title: "AI Quick-Start",
-    subtitle: "From zero to productive in one week",
-    description: "A focused 2-4 hour assessment of your workflows, followed by workspace setup, prompt libraries, and hands-on training so your team is productive immediately.",
-    deliverable: "Action plan + configured workspace + prompt library",
-    audience: "Small teams and founders ready to start using AI now",
-    startingFrom: "$1,500",
-    icon: "Zap",
-    duration: "2-4 hours + follow-up"
-  },
-  {
-    title: "Implementation Sprint",
-    subtitle: "Rebuild your core workflows around AI",
-    description: "A 1-2 week deep engagement where I embed with your team, redesign key processes, set up the environment, and train everyone on the new workflows.",
-    deliverable: "Configured environment + redesigned workflows + trained team",
-    audience: "Growing companies ready to make AI a real part of how they work",
-    startingFrom: "$5,000",
-    icon: "Code",
-    duration: "1-2 weeks"
-  },
-  {
-    title: "Ongoing Advisory",
-    subtitle: "An AI expert in your corner, month after month",
-    description: "Monthly check-ins, async support, and continuous optimization as your team's usage matures. New workflows, troubleshooting, and strategy as new capabilities ship.",
-    deliverable: "Monthly strategy sessions + async support + new workflow builds",
-    audience: "Teams scaling AI usage who want a dedicated expert on call",
-    startingFrom: "$2,000/mo",
-    icon: "RefreshCw",
-    duration: "Monthly"
-  }
-] as const;
-
-// Value propositions
-export const valueProps = [
-  {
-    title: "Practical, Not Theoretical",
-    description: "We focus on implementable solutions that work in the real world",
-    icon: "CheckCircle"
-  },
-  {
-    title: "Size-Appropriate Solutions", 
-    description: "Tailored for small to mid-market companies, not enterprise complexity",
-    icon: "Target"
-  },
-  {
-    title: "End-to-End Partnership",
-    description: "From strategy through implementation and beyond",
-    icon: "ArrowRight"
-  },
-  {
-    title: "ROI-Focused Approach",
-    description: "Every recommendation tied to measurable business outcomes", 
-    icon: "TrendingUp"
-  }
-] as const;
-
-// Founder credentials
-export const credentials = [
-  "Strategic Leadership",
-  "Process Optimization Expert",
-  "EOS Implementer", 
-  "AI Integration Specialist"
-] as const;
-
-// Footer links
-export const footerLinks = {
-  company: [
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Process", href: "#how-we-work" },
-    { label: "Contact", href: "#contact" }
+export const siteConfig = {
+  name: "Infinite Play",
+  description:
+    "Infinite Play is a small AI transformation firm. We train teams, map the highest-leverage AI opportunities inside your business, and build the custom systems that make AI real in your day-to-day work.",
+  url: "https://infiniteplay.ai",
+  tagline: "The AI landscape keeps changing. We help your team stay ahead of it.",
+  keywords: [
+    "AI consulting",
+    "AI transformation",
+    "AI training",
+    "AI opportunity audit",
+    "custom AI systems",
+    "AI agents",
+    "AI automation",
+    "Claude consulting",
+    "GPT consulting",
+    "Gemini consulting",
+    "Google Workspace AI",
+    "fractional AI",
   ],
-  resources: [
-    { label: "Blog", href: "#" },
-    { label: "Case Studies", href: "#" },
-    { label: "AI Readiness Quiz", href: "#" }
-  ],
-  legal: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" }
-  ]
 } as const;
 
-// Contact information
 export const contactInfo = {
   email: "jeremy@infiniteplay.ai",
   linkedin: "https://www.linkedin.com/in/jeremyolken/",
+  linkedinLabel: "Connect on LinkedIn",
   location: "Denver, CO",
-  calendly: "https://calendly.com/jeremy-infiniteplay/discovery"
 } as const;
 
-// Claude product taxonomy (COPY-04)
-export const claudeProducts = [
-  {
-    id: "chat",
-    name: "Claude Chat",
-    icon: "MessageSquare",
-    category: "individual",
-    description: "The conversational interface millions use daily for writing, analysis, and problem-solving.",
-    howJeremyHelps: "I teach teams to move beyond basic prompting — custom instructions, Projects for context management, and workflows that replace hours of manual work."
-  },
-  {
-    id: "teams",
-    name: "Claude for Teams",
-    icon: "Users",
-    category: "team",
-    description: "Shared workspace with team-wide conversations, centralized billing, and admin controls.",
-    howJeremyHelps: "I set up team workspaces with shared prompt libraries, onboard every team member, and build adoption habits that stick past week one."
-  },
-  {
-    id: "enterprise",
-    name: "Claude Enterprise",
-    icon: "Building2",
-    category: "team",
-    description: "SSO, SCIM provisioning, expanded context windows, and enterprise-grade security for large organizations.",
-    howJeremyHelps: "I design the rollout strategy, configure workspaces by department, and create training programs scaled to hundreds of users."
-  },
-  {
-    id: "code",
-    name: "Claude Code",
-    icon: "Terminal",
-    category: "developer",
-    description: "An agentic coding tool that lives in your terminal — reads your codebase, runs commands, and writes code alongside you.",
-    howJeremyHelps: "I configure Claude Code for your repo with custom CLAUDE.md instructions, slash commands, and MCP integrations that make it a real team member."
-  },
-  {
-    id: "api",
-    name: "Claude API",
-    icon: "Code",
-    category: "developer",
-    description: "Direct access to Claude models for building custom applications, automations, and integrations.",
-    howJeremyHelps: "I architect API-powered workflows — from automated document processing to custom internal tools — so Claude works even when nobody is prompting."
-  },
-  {
-    id: "mcp",
-    name: "MCP (Model Context Protocol)",
-    icon: "Plug",
-    category: "developer",
-    description: "An open standard that connects Claude to your tools, databases, and internal systems.",
-    howJeremyHelps: "I build custom MCP servers that give Claude access to your Notion, Slack, databases, and internal APIs — turning it from a chatbot into an integrated team member."
-  }
-] as const;
-
-// Workflow before/after examples (COPY-05, TRUST-04)
-export const workflowExamples = [
-  {
-    id: "weekly-reports",
-    title: "Weekly Status Reports",
-    context: "Operations team at a 50-person company",
-    before: "Manager spends 3 hours every Monday compiling updates from Slack, email, and project tools into a status report",
-    after: "AI pulls from Slack and Linear via MCP, drafts the report in 10 minutes. Manager reviews and sends in 20 minutes total.",
-    timeSaved: "2.5 hours/week",
-    claudeProduct: "Tool integration"
-  },
-  {
-    id: "code-review",
-    title: "Code Review and Documentation",
-    context: "Engineering team adopting AI-assisted development",
-    before: "Senior devs spend 6+ hours per week reviewing PRs and writing documentation nobody reads",
-    after: "AI reviews PRs against team standards, suggests fixes, and generates documentation that stays in sync with the code.",
-    timeSaved: "4 hours/week per senior dev",
-    claudeProduct: "Agentic coding"
-  },
-  {
-    id: "customer-research",
-    title: "Customer Research Synthesis",
-    context: "Product team at a growing SaaS company",
-    before: "PM manually reads 200+ support tickets and NPS responses, writes a quarterly insights deck over 2 days",
-    after: "AI analyzes all tickets via API, identifies patterns, and produces a structured insights report with citations. PM refines in 2 hours.",
-    timeSaved: "1.5 days/quarter",
-    claudeProduct: "API automation"
-  },
-  {
-    id: "onboarding-docs",
-    title: "New Hire Onboarding",
-    context: "HR team struggling with outdated documentation",
-    before: "New hires get a stale Notion wiki and figure things out by asking teammates, slowing everyone down for 2-3 weeks",
-    after: "AI-powered onboarding assistant answers questions from live company docs, Slack history, and process wikis. New hires are productive in days.",
-    timeSaved: "1-2 weeks ramp time",
-    claudeProduct: "Tool integration"
-  }
-] as const;
-
-// Trust bar credibility markers (TRUST-02)
-export const trustBarItems = [
-  { label: "Teams Helped", value: "20+" },
-  { label: "Workflows Implemented", value: "50+" },
-  { label: "Hours Saved for Clients", value: "1,000+" },
-] as const;
-
-// Results case study snippets (TRUST-03)
-export const resultsItems = [
-  {
-    title: "Operations Team Unburied",
-    context: "50-person professional services firm",
-    before: "Team leads spent 4+ hours every Monday compiling status reports from Slack, email, and project tools",
-    after: "AI integrations draft weekly reports automatically — manager reviews and sends in 20 minutes",
-    result: "3.5 hours saved per week per manager",
-    metric: "Weekly Reports",
-  },
-  {
-    title: "Engineering Velocity Unlocked",
-    context: "Growing SaaS engineering team",
-    before: "Senior developers spent 6+ hours weekly reviewing PRs and writing documentation nobody maintained",
-    after: "AI reviews against team standards, generates documentation that stays in sync with the codebase",
-    result: "4 hours reclaimed per senior dev per week",
-    metric: "Code Review & Docs",
-  },
-  {
-    title: "Customer Insights on Demand",
-    context: "Product team at a B2B SaaS company",
-    before: "PM manually read 200+ support tickets quarterly, spent 2 full days producing an insights deck",
-    after: "AI analyzes all tickets, identifies patterns, and produces a structured report with citations",
-    result: "2-day process reduced to 2 hours",
-    metric: "Research Synthesis",
-  },
-] as const;
-
-// About bio content (TRUST-01)
-export const aboutBio = {
-  name: "Jeremy Olken",
-  location: "Denver, CO",
-  headline: "I help teams stop experimenting with AI and start getting real results.",
-  paragraphs: [
-    "Before focusing on AI implementation, I spent years in operations and process optimization helping companies figure out how to actually get things done. That background means I don't start with the technology — I start with your workflows, your bottlenecks, and your team's real problems.",
-    "I started Infinite Play because I kept seeing the same pattern: companies excited about AI but stuck in the experimentation phase. They'd buy licenses, run a few demos, and then... nothing changed. I help teams get past that wall.",
-    "These days I use Claude as my primary tool — it's my pair programmer, my research assistant, and the backbone of every workflow I build for clients. I chose it for the reasons outlined above, and I stand behind that choice with every engagement.",
-  ],
-  skills: [
-    "Workflow Design",
-    "Team Training",
-    "API Integrations",
-    "Tool Connectivity (MCP)",
-    "Process Optimization",
-    "Change Management",
-  ],
-} as const;
-
-// Availability status
 export const availability = {
   accepting: true,
-  text: "Currently accepting new clients",
-  // Toggle `accepting` to false and update text to "Fully booked — next availability June 2026" when needed
+  text: "Accepting new engagements",
 } as const;
 
-// Meta information
-export const siteConfig = {
-  name: "Infinite Play | Claude Implementation Consulting",
-  description: "I help teams move past the experimentation phase with Claude and build real workflows that save hours every week. Claude implementation consulting for businesses ready to get results.",
-  tagline: "Transforming businesses, one AI solution at a time.",
-  keywords: [
-    "Claude implementation consultant",
-    "Claude consulting",
-    "Claude for business",
-    "Claude enterprise setup",
-    "AI workflow consulting",
-    "Claude Code consultant",
-    "MCP integration",
-    "Anthropic Claude consulting"
-  ]
+export const navigationItems = [
+  { href: "/#services", label: "Services" },
+  { href: "/work", label: "Work" },
+  { href: "/#about", label: "About" },
+] as const;
+
+export const heroContent = {
+  headlineLead: "The AI landscape keeps changing.",
+  headlineAccent: "We help your team stay ahead.",
+  subhead:
+    "Infinite Play is a small AI transformation firm. We train teams, find the highest-leverage places AI can help, and build the custom systems that turn it into real work.",
+  primaryCta: "Connect on LinkedIn",
+  primaryCtaHref: "https://www.linkedin.com/in/jeremyolken/",
+} as const;
+
+export const services = [
+  {
+    number: "01",
+    id: "training",
+    title: "Team Training",
+    outcome: "Your team, fluent with the tools that matter.",
+    body:
+      "Hands-on training for individuals or teams. We meet you at your current skill level and get you confident with the tools you already use plus the ones you should. Half-day, full-day, or a series — shaped to your workflows, not a generic curriculum.",
+    bullets: [
+      "Skill assessment and tailored session plan",
+      "Live, workflow-based exercises",
+      "A working prompt and template library you keep",
+    ],
+  },
+  {
+    number: "02",
+    id: "opportunity-map",
+    title: "AI Opportunity Map",
+    outcome: "A prioritized plan for where AI moves the needle.",
+    body:
+      "We sit in on how your team actually works, interview across departments, and come back with a ranked list of AI opportunities. For each one you get a recommendation — buy, build, prompt, or automate — so you know exactly what to do next and in what order.",
+    bullets: [
+      "Cross-functional interviews and workflow review",
+      "Opportunity map ranked by impact and effort",
+      "Tool, model, and build recommendations with next steps",
+    ],
+  },
+  {
+    number: "03",
+    id: "custom-systems",
+    title: "Custom AI Systems",
+    outcome: "Systems built for how your business actually runs.",
+    body:
+      "When off-the-shelf doesn't quite fit, we design and build the systems that do — agents, automations, internal tools, custom web apps. Multi-model by default. We choose the right model for each part of the job.",
+    bullets: [
+      "Scoped builds, shipped in weeks not quarters",
+      "Claude, GPT, Gemini, and open-source — picked per task",
+      "Handover that your team can own and extend",
+    ],
+  },
+] as const;
+
+export const multiModelNote =
+  "We work across Claude, GPT, Gemini, and Google Workspace — and pick the right tool for the job.";
+
+export const caseStudyTeasers = [
+  {
+    slug: "talent-systems",
+    company: "Talent Systems",
+    kind: "AI Opportunity Map + Custom Systems",
+    headline: "34 AI opportunities mapped across the business",
+    oneLiner:
+      "A full-company AI audit for the casting-software leader, followed by custom agents for customer support and casting verification.",
+  },
+  {
+    slug: "platinum-balloon",
+    company: "Platinum Balloon",
+    kind: "Custom AI System",
+    headline: "RFP to creative brief, without the grind",
+    oneLiner:
+      "An AI system that expands the problem space of a brief — surfacing sharper, non-obvious insights for agency strategists.",
+  },
+  {
+    slug: "signal-and-cipher",
+    company: "Signal and Cipher",
+    kind: "AI Education Platform",
+    headline: "A generative AI education platform for enterprise upskilling",
+    oneLiner:
+      "As Head of Product Strategy, built a platform combining static learning, interactive workshops, and hands-on training for tailored client upskilling.",
+  },
+  {
+    slug: "hidden-client",
+    company: "Hidden Client",
+    kind: "Founder-built AI Product",
+    headline: "Turning job postings into your best leads",
+    oneLiner:
+      "An AI agent that monitors LinkedIn, Indeed, and ZipRecruiter daily and delivers matched leads, contacts, and outreach drafts to fractional services firms every morning.",
+  },
+  {
+    slug: "gmr-marketing",
+    company: "GMR Marketing",
+    kind: "In-house AI Products Practice",
+    headline: "AI tooling for one of the world's leading experiential agencies",
+    oneLiner:
+      "As VP of AI Products, building AI across strategy, operations, and client-facing work for brands like Visa, NFL, NBA, Google, Mercedes-Benz, Microsoft, and more.",
+  },
+] as const;
+
+export type CaseStudy = {
+  slug: string;
+  company: string;
+  kind: string;
+  headline: string;
+  metric?: string;
+  metricLabel?: string;
+  problem: string;
+  approach: string;
+  built: string;
+  outcome: string;
+};
+
+export const caseStudies: readonly CaseStudy[] = [
+  {
+    slug: "talent-systems",
+    company: "Talent Systems",
+    kind: "AI Opportunity Map + Custom Systems",
+    headline: "34 opportunities mapped, two systems shipped",
+    metric: "34",
+    metricLabel: "AI opportunities identified",
+    problem:
+      "Talent Systems owns seven of the leading casting platforms — Casting Networks, Casting Frontier, Spotlight, Tagmin, Staff Me Up, and the Cast It products. Across 2M+ talent profiles and 15M+ auditions, manual work was piling up in places nobody had time to map: support tickets, role verification, casting workflows, internal operations. Leadership knew AI should help. They didn't know where first.",
+    approach:
+      "We ran a full-company AI opportunity audit. Cross-functional interviews across every department, workflow mapping, and ranked impact-vs-effort scoring on each candidate. The output was a prioritized list of 34 opportunities with a clear recommendation for each — buy, build, prompt, or automate.",
+    built:
+      "Two systems moved straight into production from the audit. The first: a support agent that triages, drafts, and resolves customer tickets at scale. The second: a casting-role verification agent that validates new roles from casting directors and pushes them through approval faster, shortening time-to-live for every posting.",
+    outcome:
+      "Manual review time on casting verification dropped significantly, and the support agent took over the long tail of repetitive tickets. Beyond the two shipped systems, the opportunity map became a multi-quarter AI roadmap that the leadership team is still working through.",
+  },
+  {
+    slug: "platinum-balloon",
+    company: "Platinum Balloon",
+    kind: "Custom AI System",
+    headline: "A strategy engine for agencies",
+    metric: "RFP → brief",
+    metricLabel: "Shortened by days",
+    problem:
+      "Platinum Balloon is an AI product studio for creative agencies, known for Hydrogen AI. Their strategists were spending the best part of a week turning an RFP into a creative brief — and too much of that week on formatting and scaffolding rather than uncovering insights.",
+    approach:
+      "We designed an AI system that does the scaffolding for them: ingesting the RFP, expanding the problem space, and surfacing candidate angles across human insight and unmet needs. Strategists move from blank page to sharp brief with the interesting work still in their hands.",
+    built:
+      "A multi-model workflow that combines retrieval across prior work, structured prompts tuned to the agency's strategy framework, and a review loop that keeps a human in the decisioning seat at every step.",
+    outcome:
+      "Strategists come out of a first pass with a fuller, more defensible brief in a fraction of the time. Pitch win-rates improved on briefs the system touched, and the team has capacity to chase ideas they would have cut for time.",
+  },
+  {
+    slug: "signal-and-cipher",
+    company: "Signal and Cipher",
+    kind: "AI Education Platform",
+    metric: "Enterprise",
+    metricLabel: "AI upskilling at scale",
+    headline: "Tailored AI upskilling that actually lands",
+    problem:
+      "Signal and Cipher, founded by Ian Beacraft, works with enterprises like Samsung, Intel, Coca-Cola, Google, Microsoft, Nike, and Universal to help teams adapt to generative AI. Generic training didn't move the needle. Clients wanted upskilling that met each function where it worked.",
+    approach:
+      "As Head of Product Strategy, I led the design of a generative AI education platform built around three reinforcing layers: static learning for foundations, interactive workshops for context, and hands-on training against real client workflows. Curriculum maps changed per client — the platform made that economical.",
+    built:
+      "A product that combines structured lesson flows, workshop facilitation tooling, prompt libraries, and client-specific practice environments. Instructors configure a program per engagement in hours, not weeks.",
+    outcome:
+      "Clients went from one-off AI workshops to sustained uplift. Signal and Cipher could take bigger engagements with tighter turnarounds, and the platform became the reusable spine of their enterprise work.",
+  },
+  {
+    slug: "hidden-client",
+    company: "Hidden Client",
+    kind: "Founder-built AI Product",
+    metric: "7am",
+    metricLabel: "Leads in your inbox, daily",
+    headline: "An AI agent that turns job postings into leads",
+    problem:
+      "Fractional and outsourced services firms — fractional CFOs, outsourced sales, specialized consultancies — depend on new client flow but have no reliable top-of-funnel. A company posting a full-time role for the work they already do is a high-intent signal, but nobody was surfacing it cleanly.",
+    approach:
+      "I built Hidden Client (hiddenclient.com) around a simple premise: every morning at 7am, deliver a short email of matched leads pulled from that day's job postings, complete with the decision-maker's contact and a personalized outreach draft in the user's voice. No dashboard, no login, no workflow to learn.",
+    built:
+      "A multi-source monitor across LinkedIn, Indeed, ZipRecruiter, Glassdoor, and company career pages, feeding a fit-scoring model and an outreach drafter tuned per subscriber. Monthly fit-feedback loops keep the matches sharpening over time.",
+    outcome:
+      "Hidden Client is a live product at $497/month with a 60-day guarantee. Founders pricing subscribers have converted postings into multi-month retainers, and the product now serves a growing set of fractional firms who get their pipeline in the first email of the day.",
+  },
+  {
+    slug: "gmr-marketing",
+    company: "GMR Marketing",
+    kind: "In-house AI Products Practice",
+    metric: "Omnicom",
+    metricLabel: "experiential agency",
+    headline: "AI across one of the world's leading experiential agencies",
+    problem:
+      "GMR Marketing (Omnicom's experiential agency, 1,300+ people across 12 countries) runs campaigns for Visa, NFL, NBA, WNBA, Google, Nissan, Cisco, Xfinity, Humana, Microsoft, Intel, Mercedes-Benz, Hershey, and more. The AI surface area spans strategy, creative, client services, and operations — and the right AI answer is different in each.",
+    approach:
+      "As VP of AI Products, I lead the practice. We scope, prioritize, and ship AI tooling alongside the teams that use it — strategy accelerators, operational automations, client-facing tools that plug into experiential campaigns. Multi-model by default, with the architecture and evals to pick the right tool per job.",
+    built:
+      "A growing portfolio of internal AI products and tools used across the agency, plus the governance, evaluation, and adoption practices that make them stick. The practice itself — how we identify opportunities, ship, and measure — is as much the work as any single system.",
+    outcome:
+      "GMR's teams have AI leverage in the places it matters most, without the hype tax. The practice is now a standing capability the agency sells into its most ambitious engagements.",
+  },
+] as const;
+
+export const workIntro = {
+  eyebrow: "Recent engagements",
+  headline: "Here's what we did and how.",
+  subhead:
+    "A mix of company-wide audits, shipped systems, education platforms, and founder builds. Each is a real engagement with a real outcome.",
+} as const;
+
+export const aboutContent = {
+  eyebrow: "About",
+  headline: "Small on purpose. Operator-led.",
+  firmParagraph:
+    "Infinite Play is a small AI transformation firm. We work with a handful of teams at a time — training them, mapping where AI moves the needle, and building the custom systems that turn potential into production. The shape of the engagement follows what you need, not a fixed template.",
+  jeremyParagraph:
+    "Jeremy Olken is the founder. He's currently VP of AI Products at GMR Marketing, where he leads the AI Products practice for one of the world's leading experiential marketing agencies (Visa, NFL, NBA, Google, Mercedes-Benz, Microsoft, and others). Previously Head of Product Strategy at Signal and Cipher, and the builder behind Hidden Client.",
+  capabilities: [
+    "AI training and enablement",
+    "AI opportunity mapping",
+    "Custom agent and system builds",
+    "Multi-model evaluation and selection",
+    "Product strategy and operations",
+  ],
+} as const;
+
+export const ctaContent = {
+  eyebrow: "Let's play",
+  headline: "Got a project? Let's talk.",
+  body:
+    "The best way to reach us is a LinkedIn DM. Connect with Jeremy and tell us what you're trying to do.",
+  cta: "Connect on LinkedIn",
+  ctaHref: "https://www.linkedin.com/in/jeremyolken/",
+  emailFallback: "jeremy@infiniteplay.ai",
+} as const;
+
+export const footerContent = {
+  brand: "Infinite Play",
+  tagline: "A small AI transformation firm.",
+  columns: [
+    {
+      title: "Site",
+      links: [
+        { href: "/#services", label: "Services" },
+        { href: "/work", label: "Work" },
+        { href: "/#about", label: "About" },
+      ],
+    },
+    {
+      title: "Connect",
+      links: [
+        { href: "https://www.linkedin.com/in/jeremyolken/", label: "LinkedIn", external: true },
+        { href: "mailto:jeremy@infiniteplay.ai", label: "Email", external: true },
+      ],
+    },
+  ],
 } as const;
