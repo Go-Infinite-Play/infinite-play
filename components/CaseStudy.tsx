@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import type { CaseStudy as CaseStudyData } from "@/lib/constants";
 import { staggerContainer, staggerItem } from "@/lib/animations";
 
@@ -33,21 +34,37 @@ export default function CaseStudy({ data }: { data: CaseStudyData }) {
         {data.headline}
       </motion.h2>
 
-      {data.metric && (
-        <motion.div
-          variants={staggerItem}
-          className="mt-6 inline-flex items-baseline gap-3 rounded-2xl bg-accent px-5 py-3"
-        >
-          <span className="font-heading text-3xl md:text-4xl font-bold text-accent-foreground">
-            {data.metric}
-          </span>
-          {data.metricLabel && (
-            <span className="text-sm text-accent-foreground/80">
-              {data.metricLabel}
+      <motion.div
+        variants={staggerItem}
+        className="mt-6 flex flex-wrap items-center gap-4"
+      >
+        {data.metric && (
+          <span className="inline-flex items-baseline gap-3 rounded-2xl bg-accent px-5 py-3">
+            <span className="font-heading text-3xl md:text-4xl font-bold text-accent-foreground">
+              {data.metric}
             </span>
-          )}
-        </motion.div>
-      )}
+            {data.metricLabel && (
+              <span className="text-sm text-accent-foreground/80">
+                {data.metricLabel}
+              </span>
+            )}
+          </span>
+        )}
+        {data.visitUrl && (
+          <a
+            href={data.visitUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-medium text-foreground hover:border-primary/40 hover:text-primary transition-colors"
+          >
+            {data.visitLabel ?? "Visit"}
+            <ArrowUpRight
+              size={14}
+              className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+            />
+          </a>
+        )}
+      </motion.div>
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
         <motion.div variants={staggerItem} className="md:col-span-4">

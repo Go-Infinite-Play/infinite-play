@@ -133,6 +133,8 @@ export type CaseStudy = {
   approach: string;
   built: string;
   outcome: string;
+  visitUrl?: string;
+  visitLabel?: string;
 };
 
 export const caseStudies: readonly CaseStudy[] = [
@@ -159,10 +161,12 @@ export const caseStudies: readonly CaseStudy[] = [
     metric: "7am",
     metricLabel: "Leads in your inbox, daily",
     headline: "An AI agent that turns job postings into leads",
+    visitUrl: "https://www.hiddenclient.com",
+    visitLabel: "Visit hiddenclient.com",
     problem:
       "Fractional and outsourced services firms (fractional CFOs, outsourced sales, specialized consultancies) depend on new client flow, and none of them have a reliable top-of-funnel. A company posting a full-time role for the work you already do is a high-intent signal, but nobody was surfacing those cleanly.",
     approach:
-      "I built Hidden Client (hiddenclient.com) around a simple premise. Every morning at 7am, deliver a short email of matched leads from that day's job postings, with the decision-maker's contact and a personalized outreach draft in the user's voice. No dashboard, no login, no workflow to learn.",
+      "I built and run Hidden Client as a product of my own. The premise is simple: every morning at 7am, deliver a short email of matched leads from that day's job postings, with the decision-maker's contact and a personalized outreach draft in the user's voice. No dashboard, no login, no workflow to learn.",
     built:
       "A multi-source monitor across LinkedIn, Indeed, ZipRecruiter, Glassdoor, and company career pages. It feeds a fit-scoring model and an outreach drafter tuned per subscriber. Monthly fit-feedback loops keep the matches sharpening over time.",
     outcome:
