@@ -20,11 +20,17 @@ export default function CaseStudy({ data }: { data: CaseStudyData }) {
       >
         {data.kind}
       </motion.span>
+      <motion.p
+        variants={staggerItem}
+        className="mt-2 text-sm font-mono uppercase tracking-[0.14em] text-muted-foreground"
+      >
+        {data.company}
+      </motion.p>
       <motion.h2
         variants={staggerItem}
         className="mt-3 font-heading text-3xl md:text-4xl font-bold tracking-tight text-foreground max-w-3xl"
       >
-        {data.company} — {data.headline}
+        {data.headline}
       </motion.h2>
 
       {data.metric && (

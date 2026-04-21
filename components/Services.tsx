@@ -31,7 +31,7 @@ export default function Services() {
             variants={staggerItem}
             className="mt-4 text-base md:text-lg text-muted-foreground leading-relaxed"
           >
-            Pick the one that fits where you are — or start with a conversation and we&apos;ll sort the shape together.
+            Pick the one that fits where you are. Or just start a conversation and we&apos;ll sort the shape together.
           </motion.p>
         </motion.div>
 

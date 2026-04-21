@@ -6,7 +6,7 @@ import CaseStudy from "@/components/CaseStudy";
 import { caseStudies, workIntro, siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: `Work — ${siteConfig.name}`,
+  title: `Work | ${siteConfig.name}`,
   description:
     "Recent engagements across AI audits, custom systems, education platforms, and founder builds.",
   alternates: { canonical: `${siteConfig.url}/work` },

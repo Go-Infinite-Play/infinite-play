@@ -16,7 +16,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: `${siteConfig.name} — AI transformation firm`,
+  title: `${siteConfig.name} | AI transformation firm`,
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],
   authors: [{ name: "Jeremy Olken" }],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
-    title: `${siteConfig.name} — AI transformation firm`,
+    title: `${siteConfig.name} | AI transformation firm`,
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
         url: "/infinite-play-logo.png",
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} — AI transformation firm`,
+        alt: `${siteConfig.name} | AI transformation firm`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — AI transformation firm`,
+    title: `${siteConfig.name} | AI transformation firm`,
     description: siteConfig.description,
     images: ["/infinite-play-logo.png"],
   },
