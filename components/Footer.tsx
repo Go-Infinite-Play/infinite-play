@@ -1,149 +1,64 @@
-"use client"
-
-import { motion } from "framer-motion"
-import { Mail, MapPin, Linkedin, ArrowUp, Calendar, MessageSquare } from "lucide-react"
-import { footerLinks, contactInfo, siteConfig } from "@/lib/constants"
-import { staggerContainer, staggerItem, buttonHover } from "@/lib/animations"
+import Link from "next/link";
+import { footerContent, siteConfig } from "@/lib/constants";
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
-    }
-  }
-
+  const year = new Date().getFullYear();
   return (
-    <footer className="bg-slate-900 text-slate-100 dark:bg-slate-950 dark:text-slate-200">
-      {/* Main footer content */}
-      <motion.div
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.1 }}
-        className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-0 py-12 md:py-16"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {/* Company info */}
-          <motion.div variants={staggerItem}>
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold font-heading text-white mb-4">
-                {siteConfig.name}
-              </h3>
-              <p className="text-slate-400 leading-relaxed mb-6">
-                {siteConfig.description}
-              </p>
-            </div>
-
-            {/* Contact info */}
-            <div className="space-y-3">
-              <motion.a
-                href={`mailto:${contactInfo.email}`}
-                variants={buttonHover}
-                initial="rest"
-                whileHover="hover"
-                className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors"
-              >
-                <Mail className="w-4 h-4" />
-                <span className="text-sm">{contactInfo.email}</span>
-              </motion.a>
-
-              <div className="flex items-center gap-3 text-slate-400">
-                <MapPin className="w-4 h-4" />
-                <span className="text-sm">{contactInfo.location}</span>
-              </div>
-
-              <motion.a
-                href={contactInfo.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={buttonHover}
-                initial="rest"
-                whileHover="hover"
-                className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
-                <span className="text-sm">LinkedIn Profile</span>
-              </motion.a>
-
-              <motion.button
-                variants={buttonHover}
-                initial="rest"
-                whileHover="hover"
-                onClick={() => scrollToSection("#contact")}
-                className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors"
-              >
-                <Calendar className="w-4 h-4" />
-                <span className="text-sm">Book a Discovery Call</span>
-              </motion.button>
-
-              <motion.button
-                variants={buttonHover}
-                initial="rest"
-                whileHover="hover"
-                onClick={() => scrollToSection("#contact")}
-                className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors"
-              >
-                <MessageSquare className="w-4 h-4" />
-                <span className="text-sm">Send a message</span>
-              </motion.button>
-            </div>
-          </motion.div>
-
-          {/* Company links */}
-          <motion.div variants={staggerItem}>
-            <h4 className="text-lg font-semibold text-white mb-6 font-heading">
-              Company
+    <footer className="border-t border-border py-12 md:py-16">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="col-span-2 md:col-span-2">
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <span className="w-2.5 h-2.5 rounded-full bg-primary" aria-hidden />
+            <span className="font-heading font-semibold text-[15px] tracking-tight text-foreground">
+              {footerContent.brand}
+            </span>
+          </Link>
+          <p className="mt-3 text-sm text-muted-foreground max-w-xs">
+            {footerContent.tagline}
+          </p>
+        </div>
+        {footerContent.columns.map((col) => (
+          <div key={col.title}>
+            <h4 className="font-heading text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+              {col.title}
             </h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.label}>
-                  <motion.button
-                    variants={buttonHover}
-                    initial="rest"
-                    whileHover="hover"
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-slate-400 hover:text-white transition-colors text-sm text-left"
-                  >
-                    {link.label}
-                  </motion.button>
-                </li>
-              ))}
+            <ul className="mt-4 space-y-2.5">
+              {col.links.map((link) => {
+                const external = "external" in link && link.external;
+                return (
+                  <li key={link.href}>
+                    {external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-foreground hover:text-primary transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-sm text-foreground hover:text-primary transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
-          </motion.div>
-        </div>
-      </motion.div>
-
-      {/* Bottom bar */}
-      <div className="border-t border-slate-700">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 lg:px-0 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-slate-500 text-sm">
-              &copy; {new Date().getFullYear()} {siteConfig.name}. {siteConfig.tagline}
-            </p>
-
-            {/* Back to top button */}
-            <motion.button
-              variants={buttonHover}
-              initial="rest"
-              whileHover="hover"
-              whileTap="tap"
-              onClick={scrollToTop}
-              className="group flex items-center gap-2 text-slate-500 hover:text-white transition-colors text-sm"
-            >
-              <span>Back to top</span>
-              <ArrowUp
-                size={16}
-                className="group-hover:-translate-y-1 transition-transform duration-200"
-              />
-            </motion.button>
           </div>
-        </div>
+        ))}
+      </div>
+      <div className="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-border flex flex-wrap items-center justify-between gap-4">
+        <span className="text-xs text-muted-foreground">
+          © {year} {siteConfig.name}. All rights reserved.
+        </span>
+        <span className="text-xs text-muted-foreground">
+          Based in Denver, CO
+        </span>
       </div>
     </footer>
-  )
+  );
 }
