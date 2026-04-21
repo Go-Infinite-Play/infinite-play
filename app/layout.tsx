@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
-import Script from "next/script";
 import { generateStructuredData } from "@/lib/structured-data";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { siteConfig } from "@/lib/constants";
 import "./globals.css";
 
 const inter = Inter({
@@ -16,44 +15,33 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://infiniteplay.ai'),
-  title: "Infinite Play | Claude Implementation Consulting — Jeremy Olken",
-  description: "I help teams move past the experimentation phase with Claude and build real workflows that save hours every week. Claude implementation consulting for businesses ready to get results.",
-  keywords: [
-    "Claude implementation consultant",
-    "Claude consulting",
-    "Claude for business",
-    "Claude enterprise setup",
-    "AI workflow consulting",
-    "Claude Code consultant",
-    "MCP integration",
-    "Anthropic Claude consulting"
-  ],
+  metadataBase: new URL(siteConfig.url),
+  title: `${siteConfig.name} — AI transformation firm`,
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
   authors: [{ name: "Jeremy Olken" }],
   creator: "Jeremy Olken",
-  alternates: {
-    canonical: "https://infiniteplay.ai",
-  },
+  alternates: { canonical: siteConfig.url },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://infiniteplay.ai",
-    title: "Infinite Play | Claude Implementation Consulting",
-    description: "I help teams move past the experimentation phase with Claude and build real workflows that save hours every week.",
-    siteName: "Infinite Play",
+    url: siteConfig.url,
+    title: `${siteConfig.name} — AI transformation firm`,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
     images: [
       {
         url: "/infinite-play-logo.png",
         width: 1200,
         height: 630,
-        alt: "Infinite Play | Claude Implementation Consulting",
+        alt: `${siteConfig.name} — AI transformation firm`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Infinite Play | Claude Implementation Consulting",
-    description: "I help teams move past the experimentation phase with Claude and build real workflows that save hours every week.",
+    title: `${siteConfig.name} — AI transformation firm`,
+    description: siteConfig.description,
     images: ["/infinite-play-logo.png"],
   },
   icons: {
@@ -64,27 +52,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased`}
       >
-        <Script
-          defer
-          data-domain="infiniteplay.ai"
-          src="https://plausible.io/js/script.js"
-          strategy="afterInteractive"
-        />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(generateStructuredData()) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateStructuredData()),
+          }}
         />
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

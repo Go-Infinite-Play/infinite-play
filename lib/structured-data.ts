@@ -1,4 +1,4 @@
-import { contactInfo } from "./constants";
+import { contactInfo, siteConfig } from "./constants";
 
 export function generateStructuredData() {
   return {
@@ -6,17 +6,16 @@ export function generateStructuredData() {
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://infiniteplay.ai/#organization",
-        name: "Infinite Play",
-        description:
-          "I help teams move past the experimentation phase with Claude and build real workflows that save hours every week. Claude implementation consulting for businesses ready to get results.",
-        url: "https://infiniteplay.ai",
+        "@id": `${siteConfig.url}/#organization`,
+        name: siteConfig.name,
+        description: siteConfig.description,
+        url: siteConfig.url,
         founder: {
           "@type": "Person",
-          "@id": "https://infiniteplay.ai/#person",
+          "@id": `${siteConfig.url}/#person`,
         },
         areaServed: "US",
-        serviceType: "Claude Implementation Consulting",
+        serviceType: "AI consulting, training, and custom systems",
         priceRange: "$$-$$$",
         address: {
           "@type": "PostalAddress",
@@ -32,14 +31,14 @@ export function generateStructuredData() {
       },
       {
         "@type": "Person",
-        "@id": "https://infiniteplay.ai/#person",
+        "@id": `${siteConfig.url}/#person`,
         name: "Jeremy Olken",
-        jobTitle: "Claude Implementation Consultant",
-        url: "https://infiniteplay.ai",
+        jobTitle: "Founder, Infinite Play",
+        url: siteConfig.url,
         sameAs: [contactInfo.linkedin],
         worksFor: {
           "@type": "ProfessionalService",
-          "@id": "https://infiniteplay.ai/#organization",
+          "@id": `${siteConfig.url}/#organization`,
         },
       },
     ],
