@@ -50,6 +50,18 @@ export default function CaseStudy({ data }: { data: CaseStudyData }) {
             )}
           </span>
         )}
+        {data.metric2 && (
+          <span className="inline-flex items-baseline gap-3 rounded-2xl bg-accent px-5 py-3">
+            <span className="font-heading text-3xl md:text-4xl font-bold text-accent-foreground">
+              {data.metric2}
+            </span>
+            {data.metricLabel2 && (
+              <span className="text-sm text-accent-foreground/80">
+                {data.metricLabel2}
+              </span>
+            )}
+          </span>
+        )}
         {data.visitUrl && (
           <a
             href={data.visitUrl}

@@ -97,20 +97,20 @@ export const multiModelNote =
 
 export const caseStudyTeasers = [
   {
-    slug: "talent-systems",
-    company: "Talent Systems",
-    kind: "AI Opportunity Map + Custom Systems",
-    headline: "34 AI opportunities mapped across the business",
-    oneLiner:
-      "A full-company AI audit for the casting-software leader, followed by custom agents for customer support and casting verification.",
-  },
-  {
     slug: "hidden-client",
     company: "Hidden Client",
     kind: "Founder-built AI Product",
     headline: "Turning job postings into your best leads",
     oneLiner:
       "An AI agent that monitors LinkedIn, Indeed, and ZipRecruiter every day and delivers matched leads, decision-maker contacts, and personalized outreach drafts to fractional services firms every morning.",
+  },
+  {
+    slug: "talent-systems",
+    company: "Talent Systems",
+    kind: "AI Opportunity Map + Custom Systems",
+    headline: "34 AI opportunities mapped across the business",
+    oneLiner:
+      "A full-company AI audit for the casting-software leader, followed by custom agents for customer support and casting verification.",
   },
   {
     slug: "gmr-marketing",
@@ -129,6 +129,8 @@ export type CaseStudy = {
   headline: string;
   metric?: string;
   metricLabel?: string;
+  metric2?: string;
+  metricLabel2?: string;
   problem: string;
   approach: string;
   built: string;
@@ -138,22 +140,6 @@ export type CaseStudy = {
 };
 
 export const caseStudies: readonly CaseStudy[] = [
-  {
-    slug: "talent-systems",
-    company: "Talent Systems",
-    kind: "AI Opportunity Map + Custom Systems",
-    headline: "34 opportunities mapped, two systems shipped",
-    metric: "34",
-    metricLabel: "AI opportunities identified",
-    problem:
-      "Talent Systems runs seven of the leading casting platforms: Casting Networks, Casting Frontier, Spotlight, Tagmin, Staff Me Up, and the Cast It products. Across 2M+ talent profiles and 15M+ auditions, manual work was piling up in places nobody had time to map. Support tickets, role verification, casting workflows, internal operations. Leadership knew AI should help. They didn't know where to start.",
-    approach:
-      "We ran a full-company AI opportunity audit. Cross-functional interviews across every department, workflow mapping, and ranked impact-vs-effort scoring on each candidate. The output was a prioritized list of 34 opportunities, each with a clear recommendation (buy, build, prompt, or automate).",
-    built:
-      "Two systems moved straight into production from the audit. The first: a support agent that triages, drafts, and resolves customer tickets at scale. The second: a casting-role verification agent that validates new roles from casting directors and pushes them through approval faster, shortening time-to-live for every posting.",
-    outcome:
-      "Manual review time on casting verification dropped significantly, and the support agent took over the long tail of repetitive tickets. Beyond the two shipped systems, the opportunity map became a multi-quarter AI roadmap the leadership team is still working through.",
-  },
   {
     slug: "hidden-client",
     company: "Hidden Client",
@@ -171,6 +157,24 @@ export const caseStudies: readonly CaseStudy[] = [
       "A multi-source monitor across LinkedIn, Indeed, ZipRecruiter, Glassdoor, and company career pages. It feeds a fit-scoring model and an outreach drafter tuned per subscriber. Monthly fit-feedback loops keep the matches sharpening over time.",
     outcome:
       "Hidden Client is a live product at $497/month with a 60-day guarantee. Founders-pricing subscribers have converted postings into multi-month retainers, and the product now serves a growing set of fractional firms who get their pipeline in the first email of the day.",
+  },
+  {
+    slug: "talent-systems",
+    company: "Talent Systems",
+    kind: "AI Opportunity Map + Custom Systems",
+    headline: "34 opportunities mapped, two systems shipped",
+    metric: "34",
+    metricLabel: "AI opportunities identified",
+    metric2: "2",
+    metricLabel2: "Agents shipped to production",
+    problem:
+      "Talent Systems runs seven of the leading casting platforms: Casting Networks, Casting Frontier, Spotlight, Tagmin, Staff Me Up, and the Cast It products. Across 2M+ talent profiles and 15M+ auditions, manual work was piling up in places nobody had time to map. Support tickets, role verification, casting workflows, internal operations. Leadership knew AI should help. They didn't know where to start.",
+    approach:
+      "We ran a full-company AI opportunity audit. Cross-functional interviews across every department, workflow mapping, and ranked impact-vs-effort scoring on each candidate. The output was a prioritized list of 34 opportunities, each with a clear recommendation (buy, build, prompt, or automate).",
+    built:
+      "Two systems moved straight into production from the audit. The first: a support agent that triages, drafts, and resolves customer tickets at scale. The second: a casting-role verification agent that validates new roles from casting directors and pushes them through approval faster, shortening time-to-live for every posting.",
+    outcome:
+      "Manual review time on casting verification dropped significantly, and the support agent took over the long tail of repetitive tickets. Beyond the two shipped systems, the opportunity map became a multi-quarter AI roadmap the leadership team is still working through.",
   },
   {
     slug: "gmr-marketing",
