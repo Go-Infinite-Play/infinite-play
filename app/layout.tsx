@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { generateStructuredData } from "@/lib/structured-data";
 import { siteConfig } from "@/lib/constants";
 import "./globals.css";
@@ -9,14 +9,9 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta-sans",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: `${siteConfig.name} | AI transformation firm`,
+  title: siteConfig.title,
   description: siteConfig.description,
   keywords: [...siteConfig.keywords],
   authors: [{ name: "Jeremy Olken" }],
@@ -26,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
-    title: `${siteConfig.name} | AI transformation firm`,
+    title: siteConfig.title,
     description: siteConfig.description,
     siteName: siteConfig.name,
     images: [
@@ -34,13 +29,13 @@ export const metadata: Metadata = {
         url: "/infinite-play-logo.png",
         width: 1200,
         height: 630,
-        alt: `${siteConfig.name} | AI transformation firm`,
+        alt: siteConfig.title,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | AI transformation firm`,
+    title: siteConfig.title,
     description: siteConfig.description,
     images: ["/infinite-play-logo.png"],
   },
@@ -56,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased`}
+        className={`${inter.variable} font-sans antialiased`}
       >
         <script
           type="application/ld+json"

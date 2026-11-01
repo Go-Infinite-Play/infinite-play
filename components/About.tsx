@@ -1,60 +1,57 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { aboutContent, contactInfo } from "@/lib/constants";
 import { staggerContainer, staggerItem } from "@/lib/animations";
+import SectionLabel from "./SectionLabel";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-28 border-t border-border bg-secondary/30">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-16">
-        <motion.div
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="md:col-span-5"
-        >
-          <motion.span
-            variants={staggerItem}
-            className="text-xs font-mono uppercase tracking-[0.18em] text-primary"
-          >
-            {aboutContent.eyebrow}
-          </motion.span>
-          <motion.h2
-            variants={staggerItem}
-            className="mt-3 font-heading text-3xl md:text-4xl font-bold tracking-tight text-foreground"
-          >
-            {aboutContent.headline}
-          </motion.h2>
-          <motion.ul variants={staggerItem} className="mt-8 flex flex-wrap gap-2">
-            {aboutContent.capabilities.map((cap) => (
-              <li
-                key={cap}
-                className="rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground"
-              >
-                {cap}
-              </li>
-            ))}
-          </motion.ul>
-          <motion.p variants={staggerItem} className="mt-8 text-sm text-muted-foreground">
-            Based in {contactInfo.location}. Working globally.
-          </motion.p>
-        </motion.div>
+    <section id="about" className="py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-5 md:px-10">
+        <SectionLabel>{aboutContent.label}</SectionLabel>
 
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          className="md:col-span-7 space-y-5 text-[17px] text-foreground/90 leading-relaxed"
+          className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-start"
         >
-          <motion.p variants={staggerItem}>
-            {aboutContent.firmParagraph}
-          </motion.p>
-          <motion.p variants={staggerItem}>
-            {aboutContent.jeremyParagraph}
-          </motion.p>
+          <motion.div
+            variants={staggerItem}
+            className="md:col-span-5 relative aspect-[4/5] overflow-hidden rounded-2xl bg-muted"
+          >
+            <Image
+              src="/founder-photo.jpg"
+              alt="Jeremy Olken in Denver"
+              fill
+              sizes="(min-width: 768px) 40vw, 100vw"
+              className="object-cover object-[58%_center]"
+            />
+          </motion.div>
+
+          <div className="md:col-span-7">
+            <motion.h2
+              variants={staggerItem}
+              className="text-[clamp(2.5rem,5.5vw,4.5rem)] font-medium leading-[1] tracking-[-0.04em] text-foreground"
+            >
+              {aboutContent.headline}
+            </motion.h2>
+            {aboutContent.paragraphs.map((paragraph) => (
+              <motion.p
+                key={paragraph}
+                variants={staggerItem}
+                className="mt-6 max-w-xl text-xl md:text-2xl text-foreground/80 leading-snug tracking-[-0.01em]"
+              >
+                {paragraph}
+              </motion.p>
+            ))}
+            <motion.p variants={staggerItem} className="mt-8 text-sm text-muted-foreground">
+              Based in {contactInfo.location}. Working with clients anywhere.
+            </motion.p>
+          </div>
         </motion.div>
       </div>
     </section>

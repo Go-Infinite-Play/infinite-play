@@ -17,7 +17,7 @@
   --color-border: var(--border);
   --color-ring: var(--ring);
   --font-sans: var(--font-inter);
-  --font-heading: var(--font-plus-jakarta-sans);
+  --font-heading: var(--font-inter);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -26,20 +26,20 @@
 
 :root {
   --radius: 0.75rem;
-  --background: #FAFAFA;
-  --foreground: #0F172A;
-  --card: #FFFFFF;
-  --card-foreground: #0F172A;
-  --primary: #FB5B3D;
+  --background: #F4F2ED;
+  --foreground: #121212;
+  --card: #FBFAF7;
+  --card-foreground: #121212;
+  --primary: #F0532F;
   --primary-foreground: #FFFFFF;
-  --secondary: #F1F5F9;
-  --secondary-foreground: #0F172A;
-  --muted: #F1F5F9;
-  --muted-foreground: #64748B;
-  --accent: #FFF1EC;
-  --accent-foreground: #B84A30;
-  --border: #E2E8F0;
-  --ring: #FB5B3D;
+  --secondary: #EAE7E0;
+  --secondary-foreground: #121212;
+  --muted: #EAE7E0;
+  --muted-foreground: #6B6862;
+  --accent: #FBE3DA;
+  --accent-foreground: #B23A1E;
+  --border: #DAD6CD;
+  --ring: #F0532F;
 }
 
 @layer base {
@@ -54,6 +54,10 @@
   }
   html {
     scroll-behavior: smooth;
+  }
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
   }
 }
 
