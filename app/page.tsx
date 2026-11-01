@@ -1,9 +1,10 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import Why from "@/components/Why";
 import Services from "@/components/Services";
-import RecentWork from "@/components/RecentWork";
+import Work from "@/components/Work";
 import About from "@/components/About";
-import CTA from "@/components/CTA";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -12,10 +13,11 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        <Why />
         <Services />
-        <RecentWork />
+        <Work />
         <About />
-        <CTA />
+        <Contact />
       </main>
       <Footer />
     </div>

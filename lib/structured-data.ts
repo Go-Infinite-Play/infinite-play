@@ -15,7 +15,7 @@ export function generateStructuredData() {
           "@id": `${siteConfig.url}/#person`,
         },
         areaServed: "US",
-        serviceType: "AI consulting, training, and custom systems",
+        serviceType: "Small business consulting, custom software, and automation",
         priceRange: "$$-$$$",
         address: {
           "@type": "PostalAddress",
